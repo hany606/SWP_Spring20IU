@@ -20,7 +20,7 @@ For the commit messages, it is prefered to start the commit with square brackets
 
 For example:
 ```bash
-git commit -m "[Enhancements] improve the search algorithm; change the counter"
+  git commit -m "[Enhancements] improve the search algorithm; change the counter"
 ```
 
 * After each sprint, the work will be merged with the master branch unless there is an exception.
@@ -32,5 +32,8 @@ git commit -m "[Enhancements] improve the search algorithm; change the counter"
 
 * For working in parallel on different ways for the same feature, another branch can be created.
 ```bash
-git chcekout -b <branch_name>
+  git chcekout -b <branch_name>
+  git push origin <branch_name>
 ```
+
+* Before any starting in coding any work, pull the newest version, and after adding impelementing something new, add and commit, and before closing your machine push your work.
