@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from pymongo import MongoClient
 import json
 
 
@@ -19,8 +20,12 @@ def url_create_tutorial():
 
     text = request.form["text"]
     presentation = {"text": text}
-    with open('presentation.json', 'w') as outfile:
-        json.dump(presentation, outfile)
+    credentials = ''
+    with open("credentials.txt", "r") as f:
+        credentials = f.read()
+    client = MongoClient(credentials)
+    db = client.virtual_assistant
+    db.presentations.insert_one({"sample presentation": presentation})
     return render_template("create_tutorial.html", default_css=default_css)
 
 if __name__ == "__main__":
