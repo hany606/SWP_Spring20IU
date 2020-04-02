@@ -8,4 +8,4 @@ gltf.convert_images("png")
 gltf.images[0].uri  # will now be something like "data:image/png;base64,iVBORw0KGg..."
 gltf.images[0].name  # will be myfile.png
 
-gltf.save("sample.gltf")
+gltf.save("Sample.gltf")
