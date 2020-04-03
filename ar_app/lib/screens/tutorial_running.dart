@@ -19,11 +19,11 @@ class _TutorialRunningState extends State<TutorialRunning> {
   List<List<double>> positions_raw = [[0, 0, -2],[1, 0, -2], [3, 0, -2],[4, -3, -2], [6, 0, -2]];
   List<vector.Vector3> positions = new List();
 
-  List<List<double>> rotations_raw = [[0, 0, 0],[0, 0, 0], [0, 0, 0],[0, 0, 0], [0, 0, 0]];
+  List<List<double>> rotations_raw = [[0, 1, 0, 1],[0, 1, 0, 1], [0, 1, 0, 1],[0, 1, 0, 1], [0, 1, 0, 1]];
   List<vector.Vector4> rotations = new List();
 
-  List<String> slides = ["../assets/tutorial1/SlideSample.gltf",
-                         "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/sample.gltf",
+  List<String> slides = ["https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/SlideSample.gltf",
+                         "SlideSample.png",
                          "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/AnimatedCube/glTF/AnimatedCube.gltf",
                          "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/BrainStem/glTF/BrainStem.gltf",
                          "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/Duck/glTF/Duck.gltf"];
@@ -66,7 +66,7 @@ class _TutorialRunningState extends State<TutorialRunning> {
     for(int i = 0; i < positions_raw.length; i++){
       // debugPrint(positions_raw[i][0].toString());
       positions.add(vector.Vector3(positions_raw[i][0],positions_raw[i][1],positions_raw[i][2]));
-      rotations.add(vector.Vector4(rotations_raw[i][0],rotations_raw[i][1],rotations_raw[i][2],0));
+      rotations.add(vector.Vector4(rotations_raw[i][0],rotations_raw[i][1],rotations_raw[i][2], rotations_raw[i][3]));
     }
 
     // _addSphereGuide(arCoreController);

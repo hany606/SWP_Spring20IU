@@ -4,7 +4,7 @@ import json
 
 
 def create_slide(out, uri):
-    shutil.copyfile("Box.bin", uri+".bin")
+    shutil.copyfile("Box.bin", out+uri+".bin")
     with open("Box.gltf","r") as read_file:
         data = json.load(read_file)
         data["nodes"][0]["name"] = uri
@@ -15,8 +15,18 @@ def create_slide(out, uri):
         with open(out+uri+".gltf","w+") as write_file:
             json.dump(data, write_file)
 
-out_path = "../tutorial1/"
+def create_tutorial(tutorial_path, num):
+    for i in range(num):
+        create_slide(tutorial_path,"Slide{:}".format(i+1))
+        gltf = GLTF.load(tutorial_path+'Slide{:}.gltf'.format(i+1))
+        gltf.export(tutorial_path+'Slide{:}.gltf'.format(i+1))
 
-create_slide(out_path, "SlideSample")
-gltf = GLTF.load(out_path+'SlideSample.gltf')
-gltf.export(out_path+'SlideSample.gltf')
+tutorial_path = "../tutorial1/"
+
+create_tutorial(tutorial_path, 5)
+
+# create_slide(tutorial_path, "SlideSample")
+# gltf = GLTF.load(tutorial_path+'SlideSample.gltf')
+# gltf.export(tutorial_path+'SlideSample.gltf')
+
+

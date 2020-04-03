@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/hany/repos/Uni_Courses/SWP_Spring20IU/example/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-af/values-af.xml",
+            "outputFile": "/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-af/values-af.xml",
             "map": [
                 {
                     "source": "/home/hany/.gradle/caches/transforms-2/files-2.1/6e37facc71bd2834630a1deabcafbeef/appcompat-1.0.0/res/values-af/values-af.xml",

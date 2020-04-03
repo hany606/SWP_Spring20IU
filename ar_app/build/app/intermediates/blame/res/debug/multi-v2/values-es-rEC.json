@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/hany/repos/Uni_Courses/SWP_Spring20IU/example/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-es-rEC/values-es-rEC.xml",
+            "outputFile": "/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-es-rEC/values-es-rEC.xml",
             "map": [
                 {
                     "source": "/home/hany/.gradle/caches/transforms-2/files-2.1/bfd6857a846984a1c081d5569445875d/core-1.14.0/res/values-es-rEC/values.xml",

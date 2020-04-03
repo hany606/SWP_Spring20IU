@@ -1,4 +1,4 @@
-name: arcore_flutter_plugin_example
+name: ar_app
 description: Demonstrates how to use the arcore_flutter_plugin plugin.
 publish_to: 'none'
 
@@ -32,9 +32,10 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/tutorial1/SlideSample.png
-    - assets/tutorial1/SlideSample.gltf
-    - assets/tutorial1/SlideSample.bin
+    - lib/screens/SlideSample.png
+    - assets/SlideSample.png
+    - assets/SlideSample.gltf
+    - assets/SlideSample.bin
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

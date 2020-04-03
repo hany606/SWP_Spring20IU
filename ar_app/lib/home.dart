@@ -1,7 +1,6 @@
-import 'package:arcore_flutter_plugin_example/screens/tutorial_running.dart';
-import 'package:arcore_flutter_plugin_example/screens/tutorial_selection.dart';
-import 'package:flutter/material.dart';
 import 'screens/tutorial_running.dart';
+import 'screens/tutorial_selection.dart';
+import 'package:flutter/material.dart';
 
 
 class HomeScreen extends StatelessWidget {

@@ -176,13 +176,13 @@
       "languageVersion": "2.3"
     },
     {
-      "name": "arcore_flutter_plugin_example",
+      "name": "ar_app",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2020-04-03T00:08:49.592292Z",
+  "generated": "2020-04-03T19:10:36.365500Z",
   "generator": "pub",
   "generatorVersion": "2.7.0"
 }
