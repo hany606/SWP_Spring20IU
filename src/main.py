@@ -12,6 +12,7 @@ CORS(app)
 
 presentations = []
 
+new_id = ''
 #images are base64 encoded!
 
 @app.route('/', methods = ["GET"])
@@ -20,9 +21,9 @@ def test():
         'ayaz' : 'loh'
     })
 
-@app.route('/create', methods = ["GET", "POST"])
-def url_create():  
-    response_object = {'status': 'success'}
+@app.route('/create', methods = ["POST"])
+def url_create(): 
+    response_object = {'status': 'success', 'id': ''}
     if request.method == 'POST':
         new_presentation = {
             'id' : uuid.uuid4().hex,
@@ -31,8 +32,9 @@ def url_create():
         }
         presentations.append(new_presentation)
         print(new_presentation['id'])
-    
-    return response_object
+        response_object['id'] = new_presentation['id']
+        new_id = new_presentation['id']
+        return response_object
 
 @app.route('/edit/<id>', methods = ["GET", "POST"])
 def url_edit(id):
@@ -52,4 +54,5 @@ def url_edit(id):
         return response_object
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug = True)
+    new_id = ''
+    app.run(debug = True)

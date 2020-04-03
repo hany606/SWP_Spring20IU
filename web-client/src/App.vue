@@ -8,7 +8,7 @@
     <v-toolbar-title>Virtual Assistant<br> </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items>
-      <v-btn text small href="./">Home</v-btn>
+      <v-btn text small href="../">Home</v-btn>
       <newPres></newPres>
     </v-toolbar-items>
     </v-app-bar>

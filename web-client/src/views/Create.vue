@@ -7,10 +7,19 @@ import axios from 'axios';
 
 export default {
   name: 'Create',
+  data() {
+    return {
+      id: '',
+    };
+  },
   methods: {
     onClick() {
       const path = 'http://localhost:5000/create';
-      axios.post(path);
+      axios.post(path).then((response) => {
+        this.id = response.data.id;
+        console.log(this.id);
+        window.location.href = `../edit/${this.id}`;
+      });
     },
   },
 };
