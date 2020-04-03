@@ -14,7 +14,7 @@ export default {
   },
   methods: {
     onClick() {
-      const path = 'http://localhost:5000/create';
+      const path = 'http://10.90.138.113:5000/create';
       axios.post(path).then((response) => {
         this.id = response.data.id;
         console.log(this.id);

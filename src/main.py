@@ -1,3 +1,4 @@
+#!usr/bin/python3
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 from PIL import Image
@@ -55,4 +56,4 @@ def url_edit(id):
 
 if __name__ == "__main__":
     new_id = ''
-    app.run(host="0.0.0.0", debug = True)
+    app.run(host="0.0.0.0", port=5000, debug = True)
