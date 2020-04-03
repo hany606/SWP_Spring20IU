@@ -1,14 +1,18 @@
 <template>
-<v-image-input v-model="imageData" :image-quality="0.85" clearable image-format="jpeg" />
+  <v-btn text small v-on:click="onClick()">create</v-btn>
 </template>
 
 <script>
-import VImageInput from 'vuetify-image-input';
+import axios from 'axios';
 
 export default {
   name: 'Create',
-  components: {
-    'v-image-input': VImageInput,
+  methods: {
+    onClick() {
+      const path = 'http://localhost:5000/create';
+      axios.post(path);
+    },
   },
 };
+
 </script>

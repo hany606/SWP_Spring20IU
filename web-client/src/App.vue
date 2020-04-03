@@ -9,7 +9,7 @@
     <v-spacer></v-spacer>
     <v-toolbar-items>
       <v-btn text small href="./">Home</v-btn>
-      <v-btn text small href="./create">Create</v-btn>
+      <newPres></newPres>
     </v-toolbar-items>
     </v-app-bar>
     <v-content>
@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import Create from '@/views/Create.vue';
 
 export default {
   name: 'App',
@@ -26,5 +27,8 @@ export default {
   data: () => ({
     //
   }),
+  components: {
+    newPres: Create,
+  },
 };
 </script>
