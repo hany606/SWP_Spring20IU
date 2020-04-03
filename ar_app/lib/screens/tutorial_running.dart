@@ -12,21 +12,21 @@ class TutorialRunning extends StatefulWidget {
 class _TutorialRunningState extends State<TutorialRunning> {
   ArCoreController arCoreController;
   ArCoreNode slideNode;
-  int slideIdx = 0;
+  int slideIdx = -1;
 
 
   // TODO: Import this from the setting of the tutorial
-  List<List<double>> positions_raw = [[0, 0, -2],[1, 0, -2], [3, 0, -2],[4, -3, -2], [6, 0, -2]];
+  List<List<double>> positions_raw = [[0, 0, -2],[1, 0, -2], [2, 0, -2],[3, 0, -2], [4, 0, -2]];
   List<vector.Vector3> positions = new List();
 
-  List<List<double>> rotations_raw = [[0, 1, 0, 1],[0, 1, 0, 1], [0, 1, 0, 1],[0, 1, 0, 1], [0, 1, 0, 1]];
+  List<List<double>> rotations_raw = [[0, 1, 0, 1],[0, 1, 0, 1.25], [0, 1, 0, 1.5],[0, 1, 0, 1.75], [0, 1, 0, 2]];
   List<vector.Vector4> rotations = new List();
 
-  List<String> slides = ["https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/SlideSample.gltf",
-                         "SlideSample.png",
-                         "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/AnimatedCube/glTF/AnimatedCube.gltf",
-                         "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/BrainStem/glTF/BrainStem.gltf",
-                         "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/Duck/glTF/Duck.gltf"];
+  List<String> slides = ["https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide1.gltf",
+                         "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide2.gltf",
+                         "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide3.gltf",
+                         "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide4.gltf",
+                         "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide5.gltf"];
 
   @override
   Widget build(BuildContext context) {
@@ -64,115 +64,26 @@ class _TutorialRunningState extends State<TutorialRunning> {
 
 
     for(int i = 0; i < positions_raw.length; i++){
-      // debugPrint(positions_raw[i][0].toString());
       positions.add(vector.Vector3(positions_raw[i][0],positions_raw[i][1],positions_raw[i][2]));
       rotations.add(vector.Vector4(rotations_raw[i][0],rotations_raw[i][1],rotations_raw[i][2], rotations_raw[i][3]));
     }
 
-    // _addSphereGuide(arCoreController);
-    _addSlide(0);
+    _addIntroGuide();
+    // _addSlide(0);
   }
-
-
-
-  // void _handleOnPlanTab(List<ArCoreHitTestResult> hits) {
-  //   debugPrint("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-
-  //   final hit = hits.first;
-  //   debugPrint("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-
-  //   if(nextFlag){
-  //       debugPrint("--------------------------------------------");
-  //     nextFlag = false;
-  //     _updateSlide(hit);
-  //   }
-    
-  // }
-
-  // void _handleOnPlaneDetected(ArCorePlane plane) {  
-  //   debugPrint("--------------------------------------------");
-
-  //   // if(nextFlag){
-  //   //     debugPrint("--------------------------------------------");
-  //   //   nextFlag = false;
-  //   //   _updateSlide(plane);
-  //   // }
-  // }
-
-  void _addSphereGuide(ArCoreController controller) {
-    final material = ArCoreMaterial(
-      color: Colors.yellow,
-    );
-    final slide = ArCoreSphere(
-      materials: [material],
-      radius: 0.1,
-    );
-    slideNode = ArCoreNode(
-      shape: slide,
-      position: vector.Vector3(0, 0, -1),
-      name: "current"
-
-    );
-
-    // final toucanNode = ArCoreReferenceNode(
-    //     name: "Toucano",
-    //     objectUrl:
-    //         "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/Duck/glTF/Duck.gltf",
-    //     position: vector.Vector3(0, 0, -2),
-
-    //     );
-        controller.addArCoreNode(slideNode);
-        // arCoreController.addArCoreNodeWithAnchor(toucanNode);
+  void _addIntroGuide() {
+    final introSlide = ArCoreReferenceNode(
+        name: "current",
+        objectUrl:
+            "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide0.gltf",
+        position: positions[0],
+        rotation: rotations[0]
+        );
+        arCoreController.addArCoreNodeWithAnchor(introSlide);
 
   }
-
-  // void _addSlide(ArCoreHitTestResult plane) {
-  //   final material = ArCoreMaterial(
-  //     color: Colors.yellow,
-  //   );
-  //   final slide = ArCoreSphere(
-  //     materials: [material],
-  //     radius: 0.1,
-  //   );
-  //   slideNode = ArCoreNode(
-  //     shape: slide,
-  //     name: "current",
-  //     position: plane.pose.translation,
-  //     rotation: plane.pose.rotation);
-  //   arCoreController.addArCoreNode(slideNode);
-  //   // arCoreController.addArCoreNode(slideNode);
-  // }
-
-  // void _updateSlide(ArCoreHitTestResult plane) {
-  //   arCoreController.removeNode(nodeName: "current");
-  //   _addSlide(plane);
-  // }
-
-  // onSlideChange(int newSlideIdx) {
-  //   if (newSlideIdx != this.slideIdx) {
-  //     this.slideIdx = newSlideIdx;
-  //     nextFlag = true;
-  //     updateMaterials();
-  //     // _updateSlide();
-  //   }
-  // }
 
   void _addSlide(int idx) {
-    // final material = ArCoreMaterial(
-    //   color: Colors.yellow,
-    // );
-    // final slide = ArCoreSphere(
-    //   materials: [material],
-    //   radius: 0.1,
-    // );
-    // slideNode = ArCoreNode(
-    //   shape: slide,
-    //   name: "current",
-    //   position: positions[idx],
-    //   rotation: rotations[idx]
-    // );
-    
-
     final slideNode = ArCoreReferenceNode(
         name: "current",
         objectUrl: slides[idx],
@@ -204,7 +115,7 @@ class SlideControl extends StatefulWidget {
   // TODO: Configurations that will be set from the file of the tutorial describtion
   final int initialSlideIdx;
   final int minSlideIdx = 0;
-  final int maxSlideIdx = 5;
+  final int maxSlideIdx = 5-1;
   
   final ValueChanged<int> onSlideChange;
 

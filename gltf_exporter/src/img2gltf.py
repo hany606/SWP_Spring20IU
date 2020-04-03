@@ -17,9 +17,9 @@ def create_slide(out, uri):
 
 def create_tutorial(tutorial_path, num):
     for i in range(num):
-        create_slide(tutorial_path,"Slide{:}".format(i+1))
-        gltf = GLTF.load(tutorial_path+'Slide{:}.gltf'.format(i+1))
-        gltf.export(tutorial_path+'Slide{:}.gltf'.format(i+1))
+        create_slide(tutorial_path,"Slide{:}".format(i))
+        gltf = GLTF.load(tutorial_path+'Slide{:}.gltf'.format(i))
+        gltf.export(tutorial_path+'Slide{:}.gltf'.format(i))
 
 tutorial_path = "../tutorial1/"
 
