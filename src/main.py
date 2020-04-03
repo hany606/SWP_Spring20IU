@@ -1,32 +1,49 @@
-from flask import Flask, render_template, request
-from pymongo import MongoClient
+from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
+from PIL import Image
 import json
+import uuid
+import base64
 
 
 app = Flask(__name__)
-default_css = open(".\\stylesheets\\style.css", "r").read()
 
-@app.route('/')
-def url_index():
-    buttons = {
-        "Create tutorial" : "/create_tutorial",
-    }
-    return render_template('index.html', buttons = buttons, default_css = default_css)
+CORS(app)
 
-@app.route('/create_tutorial', methods = ["POST", "GET"])
-def url_create_tutorial():
-    if request.method == "GET":
-        return render_template("create_tutorial.html", default_css=default_css)
+presentations = []
 
-    text = request.form["text"]
-    presentation = {"text": text}
-    credentials = ''
-    with open("credentials.txt", "r") as f:
-        credentials = f.read()
-    client = MongoClient(credentials)
-    db = client.virtual_assistant
-    db.presentations.insert_one({"sample presentation": presentation})
-    return render_template("create_tutorial.html", default_css=default_css)
+#images are base64 encoded!
+
+@app.route('/create', methods = ["GET", "POST"])
+def url_create():  
+    response_object = {'status': 'success'}
+    if request.method == 'POST':
+        new_presentation = {
+            'id' : uuid.uuid4().hex,
+            'title': 'Untitled',
+            'slides' : []
+        }
+        presentations.append(new_presentation)
+        print(new_presentation['id'])
+    
+    return response_object
+
+@app.route('/edit/<id>', methods = ["GET", "POST"])
+def url_edit(id):
+    
+    presentation = {}
+    for p in presentations:
+        if p['id'] == id:
+            presentation = p
+
+    response_object = {'status': 'success'}
+    if request.method == 'GET':
+        return jsonify(presentation)
+    else:
+        img = request.files['image']
+        img_string = base64.b64encode(img.read())
+        presentation['slides'].append(img_string)
+        return response_object
 
 if __name__ == "__main__":
     app.run(debug = True)
