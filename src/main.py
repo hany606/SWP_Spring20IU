@@ -14,6 +14,12 @@ presentations = []
 
 #images are base64 encoded!
 
+@app.route('/', methods = ["GET"])
+def test():
+    return jsonify({
+        'ayaz' : 'loh'
+    })
+
 @app.route('/create', methods = ["GET", "POST"])
 def url_create():  
     response_object = {'status': 'success'}
@@ -46,4 +52,4 @@ def url_edit(id):
         return response_object
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(host="0.0.0.0", debug = True)
