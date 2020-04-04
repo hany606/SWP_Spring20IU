@@ -10,9 +10,8 @@ DB_CREDENTIALS = ""
 
 def db_connect(credentials):
     try:
-        db = MongoClient("mongodb://" + credentials).virtual_assistant
-        print("Successfully connected to the database")
-        return db
+        db = MongoClient("mongodb://" + credentials[:-1])
+        return db.virtual_assistant
     except Exception:
         print("Cannot connect to the database")
         return None
@@ -21,7 +20,7 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route('/create', methods = ["POST"])
-def url_create(): 
+def url_create():
     response_object = {'status': 'success', 'id': ''}
     if request.method == 'POST':
         pres = {
@@ -30,18 +29,17 @@ def url_create():
             'slides' : []
         }
         response_object['id'] = pres['id']
-        cursor = db_connect(DB_CREDENTIALS)
-        cursor.presentations.insert_one(pres)
-        cursor.close()
+        db = db_connect(DB_CREDENTIALS)
+        db.presentations.insert_one(pres)
         print("Presentation is saved to the database")
         return response_object
 
 @app.route('/edit/<id>', methods = ["GET", "POST"])
 def url_edit(id):
-    cursor = db_connect(DB_CREDENTIALS)
-    pres = dbclient.presentations.find({'id': id})
-    cursor.close()
-    
+    db = db_connect(DB_CREDENTIALS)
+    pres = db.presentations.find_one({'id': id})
+    pres.pop('_id')
+
     if request.method == 'GET':
         return jsonify(pres)
     else:
@@ -49,9 +47,8 @@ def url_edit(id):
         img_string = str(base64.b64encode(img.read()))[2:-1]
         print(type(img_string))
         pres['slides'].append(img_string)
-        cursor = db_connect(DB_CREDENTIALS)
-        cursor.presentations.update_one({'id': id}, pres)
-        cursor.close()
+        db = db_connect(DB_CREDENTIALS)
+        db.presentations.update_one({'id': id}, {'$set': {'slides': pres['slides']}})
         print("Presentation is updated and saved to the database")
         return jsonify(pres)
 
