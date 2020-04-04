@@ -87,7 +87,7 @@ export default {
     newPres: Create,
   },
   created() {
-    const path = 'http://localhost:5000/create';
+    const path = 'http://10.90.138.113:5000/create';
     axios.post(path).then((response) => {
       this.id = response.data.id;
     });
@@ -97,7 +97,7 @@ export default {
       const f = e;
       this.file = f;
 
-      const path = `http://localhost:5000/edit/${this.id}/${this.current}`;
+      const path = `http://10.90.138.113:5000/edit/${this.id}/${this.current}`;
 
       const formData = new FormData();
       formData.append('image', this.file);
@@ -110,7 +110,7 @@ export default {
       });
     },
     onAddSlide() {
-      const path = `http://localhost:5000/add_slide/${this.id}`;
+      const path = `http://10.90.138.113:5000/add_slide/${this.id}`;
       axios.post(path).then((response) => {
         this.title = response.data.title;
         this.slides = response.data.slides;
