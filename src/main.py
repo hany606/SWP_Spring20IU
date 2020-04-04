@@ -1,4 +1,3 @@
-#!usr/bin/python3
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 from PIL import Image
@@ -13,14 +12,12 @@ CORS(app)
 
 presentations = []
 
-new_id = ''
+new_id = '' 
 #images are base64 encoded!
 
 @app.route('/', methods = ["GET"])
-def test():
-    return jsonify({
-        'ayaz' : 'loh'
-    })
+def url_explore():
+    return jsonify(presentations)
 
 @app.route('/create', methods = ["POST"])
 def url_create(): 
@@ -32,28 +29,27 @@ def url_create():
             'slides' : []
         }
         presentations.append(new_presentation)
-        print(new_presentation['id'])
         response_object['id'] = new_presentation['id']
-        new_id = new_presentation['id']
         return response_object
 
 @app.route('/edit/<id>', methods = ["GET", "POST"])
 def url_edit(id):
-    
-    presentation = {}
+    print(presentations)
+    current_presentation = {}
     for p in presentations:
         if p['id'] == id:
-            presentation = p
+            current_presentation = p
 
     response_object = {'status': 'success'}
     if request.method == 'GET':
-        return jsonify(presentation)
+        return jsonify(current_presentation)
     else:
         img = request.files['image']
         img_string = base64.b64encode(img.read())
-        presentation['slides'].append(img_string)
-        return response_object
+        current_presentation['slides'].append(img_string)
+        print(current_presentation['slides'])
+        return jsonify(current_presentation)
 
 if __name__ == "__main__":
     new_id = ''
-    app.run(host="0.0.0.0", port=5000, debug = True)
+    app.run(debug = True)
