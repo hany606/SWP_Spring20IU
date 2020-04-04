@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
-from pymongo import MongoClient
+from PIL import Image
 import json
 import uuid
 import base64
@@ -18,9 +18,10 @@ def db_connect(credentials):
 
 app = Flask(__name__)
 CORS(app)
+#images are base64 encoded!
 
 @app.route('/create', methods = ["POST"])
-def url_create():
+def url_create(): 
     response_object = {'status': 'success', 'id': ''}
     if request.method == 'POST':
         pres = {
@@ -34,8 +35,8 @@ def url_create():
         print("Presentation is saved to the database")
         return response_object
 
-@app.route('/edit/<id>', methods = ["GET", "POST"])
-def url_edit(id):
+@app.route('/edit/<id>/<index>', methods = ["GET", "POST"])
+def url_edit(id, index):
     db = db_connect(DB_CREDENTIALS)
     pres = db.presentations.find_one({'id': id})
     pres.pop('_id')
@@ -45,8 +46,22 @@ def url_edit(id):
     else:
         img = request.files['image']
         img_string = str(base64.b64encode(img.read()))[2:-1]
-        print(type(img_string))
-        pres['slides'].append(img_string)
+        pres['slides'][int(index)] = img_string
+        db = db_connect(DB_CREDENTIALS)
+        db.presentations.update_one({'id': id}, {'$set': {'slides': pres['slides']}})
+        print("Presentation is updated and saved to the database")
+        return jsonify(pres)
+
+@app.route('/add_slide/<id>', methods = ["GET", "POST"])
+def url_add_slide(id):
+    db = db_connect(DB_CREDENTIALS)
+    pres = db.presentations.find_one({'id': id})
+    pres.pop('_id')
+
+    if request.method == 'GET':
+        return jsonify(pres)
+    else:
+        pres['slides'].append("")
         db = db_connect(DB_CREDENTIALS)
         db.presentations.update_one({'id': id}, {'$set': {'slides': pres['slides']}})
         print("Presentation is updated and saved to the database")
