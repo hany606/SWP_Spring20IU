@@ -1,4 +1,4 @@
-import 'screens/tutorial_running.dart';
+// Source: https://stackoverflow.com/questions/49809351/how-to-create-a-circle-icon-button-in-flutter
 import 'screens/tutorial_selection.dart';
 import 'package:flutter/material.dart';
 
@@ -8,25 +8,28 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ArCore SWP G6'),
+        backgroundColor: Colors.blue,
+        title: const Text('AR virtual Assistant SWP G6'),
       ),
-      body: ListView(
-        children: <Widget>[
-          ListTile(
-            onTap: () {
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => TutorialRunning()));
-            },
-            title: Text("Preview"),
+      body: new Center(
+          child: new InkWell(
+          onTap: () {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => TutorialSelection()));
+          },
+          child: new Container(
+            width: 200.0,
+            height: 200.0,
+            padding: const EdgeInsets.all(20.0),
+            decoration: new BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.orange,
+            ),
+            child: Center(
+                  child: new Text("Select a Tutorial", style: new TextStyle(color: Colors.white, fontSize: 30.0), textAlign: TextAlign.center),
+            )
           ),
-          ListTile(
-            onTap: () {
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => TutorialSelection()));
-            },
-            title: Text("Select tutorial"),
-          ),
-        ],
+        ),
       ),
     );
   }

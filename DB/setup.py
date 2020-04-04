@@ -17,6 +17,6 @@ if __name__ == "__main__":
     # print(f)
     logging.debug('Store all the files from the assets directory')
     for i in files:
-        store_file(fs, assets_path+i)
+        store_file(fs, assets_path+i, i)
 
     client.close()

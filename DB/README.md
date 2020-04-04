@@ -4,7 +4,7 @@ The database is based on MongoDB. Python is used for the Backend.
 
 The DB consists of 3 collections:
 
-1. assets: contains the assets that we put in the DB that are necessary for process in the server (e.g. exporting images to gltf), it requires gltf file and bin file as base for the format.
+1. assets: contains the assets that we put in the DB that are necessary for process in the server (e.g. exporting images to gltf), it requires gltf file and bin file as base for the format.   Instead, these files could be in the local VM in the backend
 
 2. editor: contins the images that being made from the editor and saved there
 

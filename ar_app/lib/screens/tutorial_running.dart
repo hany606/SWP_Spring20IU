@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:arcore_flutter_plugin/arcore_flutter_plugin.dart';
 import 'package:flutter/material.dart';
 import 'package:vector_math/vector_math_64.dart' as vector;
@@ -10,11 +9,14 @@ class TutorialRunning extends StatefulWidget {
 }
 
 class _TutorialRunningState extends State<TutorialRunning> {
+  // TODO: request the tutorial with specific id 
+  // TODO: get the number of the slides
+  // TODO: Start request slide by slide with next and prev
+
   ArCoreController arCoreController;
   ArCoreNode slideNode;
   int slideIdx = -1;
-
-
+  
   // TODO: Import this from the setting of the tutorial
   List<List<double>> positions_raw = [[0, 0, -2],[1, 0, -2], [2, 0, -2],[3, 0, -2], [4, 0, -2]];
   List<vector.Vector3> positions = new List();
@@ -33,9 +35,7 @@ class _TutorialRunningState extends State<TutorialRunning> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Running a tutorial'),
-          actions: <Widget>[
-          ],
+          title: new Text('Running a tutorial'),
         ),
         body: Column(
           children: <Widget>[

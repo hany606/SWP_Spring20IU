@@ -4,6 +4,9 @@ import json
 import gridfs
 import logging
 from os import walk
+from PIL import Image
+from bson import Binary
+from io import BytesIO
 
 def get_settings(file_name="settings.json"):
     with open(file_name) as f:
@@ -16,13 +19,20 @@ def init_mongodb(settings):
     logging.debug('MongoDB connection is initiated')
     return client
 
-def store_file(fs, file_name):
-    with open(file_name, "rb") as f:
-        logging.debug('Reading the file: {:}'.format(file_name))
-        data = f.read()
-        logging.debug('Store the file data')
-        stored_id = fs.put(data, filename=file_name)
-        return stored_id
+def store_file(fs, file_path, stored_file_name, flag=None):
+    logging.debug('Reading the file: {:}'.format(file_path))
+    if(flag == "img"):
+        img = Image.open(file_path)
+        imgByteArr = BytesIO()
+        img.save(imgByteArr, format='PNG')
+        data = imgByteArr.getvalue()
+
+    else:
+        with open(file_path, "rb") as f:
+            data = f.read()
+    logging.debug('Store the file data')
+    stored_id = fs.put(data, filename=stored_file_name)
+    return stored_id
 
 
 # https://stackoverflow.com/questions/27761674/retrieving-files-in-gridfs-to-be-sent-from-flask
@@ -42,7 +52,7 @@ def clean(db,fs):
     res = db.fs.files.find()
     counter = 0
     for i in res:
-        logging.debug("Remove file: {:}".format(i["filename"]))
+        # logging.debug("Remove file: {:}".format(i["filename"]))
         counter += 1
         remove_file(fs,i["_id"])
     # print(counter)
