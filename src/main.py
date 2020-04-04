@@ -6,35 +6,42 @@ import uuid
 import base64
 
 
-dbclient = None
+DB_CREDENTIALS = ""
+
+def db_connect(credentials):
+    try:
+        db = MongoClient("mongodb://" + credentials).virtual_assistant
+        print("Successfully connected to the database")
+        return db
+    except Exception:
+        print("Cannot connect to the database")
+        return None
 
 app = Flask(__name__)
 CORS(app)
-
-#images are base64 encoded!
-
-# @app.route('/', methods = ["GET"])
-# def url_explore():
-#     return jsonify(presentations)
 
 @app.route('/create', methods = ["POST"])
 def url_create(): 
     response_object = {'status': 'success', 'id': ''}
     if request.method == 'POST':
-        new_presentation = {
+        pres = {
             'id' : uuid.uuid4().hex,
             'title': 'Untitled',
             'slides' : []
         }
-        response_object['id'] = new_presentation['id']
-        dbclient.presentations.insert_one(new_presentation)
+        response_object['id'] = pres['id']
+        cursor = db_connect(DB_CREDENTIALS)
+        cursor.presentations.insert_one(pres)
+        cursor.close()
         print("Presentation is saved to the database")
         return response_object
 
 @app.route('/edit/<id>', methods = ["GET", "POST"])
 def url_edit(id):
+    cursor = db_connect(DB_CREDENTIALS)
     pres = dbclient.presentations.find({'id': id})
-    # response_object = {'status': 'success'}
+    cursor.close()
+    
     if request.method == 'GET':
         return jsonify(pres)
     else:
@@ -42,17 +49,14 @@ def url_edit(id):
         img_string = str(base64.b64encode(img.read()))[2:-1]
         print(type(img_string))
         pres['slides'].append(img_string)
-        dbclient.presentations.insert_one(pres)
+        cursor = db_connect(DB_CREDENTIALS)
+        cursor.presentations.update_one({'id': id}, pres)
+        cursor.close()
         print("Presentation is updated and saved to the database")
         return jsonify(pres)
 
 if __name__ == "__main__":
-    cred = ""
     with open("credentials.txt") as f:
-        cred = f.read()
-    try:
-        dbclient = MongoClient("mongodb://" + cred)
-        print("Successfully connected to the database")
-    except Exception:
-        print("Cannot connect to the database")
+        DB_CREDENTIALS = f.read()
+    print("DB CREDENTIALS: ", DB_CREDENTIALS)
     app.run(host='0.0.0.0', debug = True)
