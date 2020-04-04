@@ -1,15 +1,10 @@
 <template>
 <v-container fluid>
-  <v-row class="mb-6" justify="center">Here will be some toolbar</v-row>
   <v-row class="mb-6">
-    <v-col lg="2">
-    </v-col>
     <v-col>
       <h1>{{ title }}</h1>
       <img v-bind:src="'data:image/jpeg;base64,'+this.slides[0]" height="600" width="800" contain/>
       <imgUpload v-bind:pres="this.id"></imgUpload>
-    </v-col>
-    <v-col lg="2">
     </v-col>
   </v-row>
 </v-container>

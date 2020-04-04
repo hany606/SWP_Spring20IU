@@ -1,8 +1,7 @@
 <template>
-<v-row align="center" justify="center">
-  <div id="app">
+<v-row justify="center">
+  <div id="uploader">
     <input type="file" id="file" ref="file" @change="onFileChange" />
-
     <div id="preview">
       <img v-if="url" :src="url" height="600" width="800" contain/>
     </div>
