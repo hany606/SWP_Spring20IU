@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/res/merged/release/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/home/hany/.gradle/caches/transforms-2/files-2.1/6e37facc71bd2834630a1deabcafbeef/appcompat-1.0.0/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/res/merged/release/drawable-v21/notification_action_background.xml",
+        "source": "/home/hany/.gradle/caches/transforms-2/files-2.1/6df36a31058d5c5c5cc678a139da4355/core-1.0.0/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/res/merged/release/drawable-v21/abc_edit_text_material.xml",
+        "source": "/home/hany/.gradle/caches/transforms-2/files-2.1/6e37facc71bd2834630a1deabcafbeef/appcompat-1.0.0/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/res/merged/release/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/home/hany/.gradle/caches/transforms-2/files-2.1/6e37facc71bd2834630a1deabcafbeef/appcompat-1.0.0/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/res/merged/release/drawable-v21/abc_dialog_material_background.xml",
+        "source": "/home/hany/.gradle/caches/transforms-2/files-2.1/6e37facc71bd2834630a1deabcafbeef/appcompat-1.0.0/res/drawable-v21/abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/res/merged/release/drawable-v21/abc_list_divider_material.xml",
+        "source": "/home/hany/.gradle/caches/transforms-2/files-2.1/6e37facc71bd2834630a1deabcafbeef/appcompat-1.0.0/res/drawable-v21/abc_list_divider_material.xml"
+    }
+]

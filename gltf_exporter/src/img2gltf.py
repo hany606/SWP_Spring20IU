@@ -21,12 +21,8 @@ def create_tutorial(tutorial_path, num):
         gltf = GLTF.load(tutorial_path+'Slide{:}.gltf'.format(i))
         gltf.export(tutorial_path+'Slide{:}.gltf'.format(i))
 
-tutorial_path = "../tutorial1/"
 
-create_tutorial(tutorial_path, 5)
-
-# create_slide(tutorial_path, "SlideSample")
-# gltf = GLTF.load(tutorial_path+'SlideSample.gltf')
-# gltf.export(tutorial_path+'SlideSample.gltf')
-
+if __name__ == "__main__":
+    tutorial_path = "../tutorial1/"
+    create_tutorial(tutorial_path, 5)
 

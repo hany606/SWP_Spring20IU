@@ -1,0 +1,220 @@
+DEBUG:root:Get the settings.json
+DEBUG:root:MongoDB connection is initiated
+DEBUG:root:Get the file names from the tmp_gen_editor_imgs/ directory
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide4.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide3.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide0.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide1.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide5.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide2.png
+DEBUG:root:Store the file data
+DEBUG:root:Get the settings.json
+DEBUG:root:MongoDB connection is initiated
+DEBUG:root:Remove all the files in the assets collection
+DEBUG:root:Remove file: testingFile
+DEBUG:root:Remove the file with id: 5e88b7ba881fddc0a34c3791 from the DB
+DEBUG:root:Remove file: testingFile
+DEBUG:root:Remove the file with id: 5e88b7e424b061e42311b98e from the DB
+DEBUG:root:Remove file: testingFile
+DEBUG:root:Remove the file with id: 5e88b7f338c6b67bebdbbc98 from the DB
+DEBUG:root:Remove file: testingFile
+DEBUG:root:Remove the file with id: 5e88b7ff024a48aba85c768a from the DB
+DEBUG:root:Remove file: testingFile
+DEBUG:root:Remove the file with id: 5e88b858ea88107fa5c5a569 from the DB
+DEBUG:root:Get the settings.json
+DEBUG:root:MongoDB connection is initiated
+DEBUG:root:Remove all the files in the assets collection
+DEBUG:root:Remove file: testingFile
+DEBUG:root:Remove the file with id: 5e88b7ba881fddc0a34c3791 from the DB
+DEBUG:root:Remove file: testingFile
+DEBUG:root:Remove the file with id: 5e88b7e424b061e42311b98e from the DB
+DEBUG:root:Remove file: testingFile
+DEBUG:root:Remove the file with id: 5e88b7f338c6b67bebdbbc98 from the DB
+DEBUG:root:Remove file: testingFile
+DEBUG:root:Remove the file with id: 5e88b7ff024a48aba85c768a from the DB
+DEBUG:root:Remove file: testingFile
+DEBUG:root:Remove the file with id: 5e88b858ea88107fa5c5a569 from the DB
+DEBUG:root:Get the settings.json
+DEBUG:root:MongoDB connection is initiated
+DEBUG:root:Remove all the files in the assets collection
+DEBUG:root:Remove the file with id: 5e88b7ba881fddc0a34c3791 from the DB
+DEBUG:root:Remove the file with id: 5e88b7e424b061e42311b98e from the DB
+DEBUG:root:Remove the file with id: 5e88b7f338c6b67bebdbbc98 from the DB
+DEBUG:root:Remove the file with id: 5e88b7ff024a48aba85c768a from the DB
+DEBUG:root:Remove the file with id: 5e88b858ea88107fa5c5a569 from the DB
+DEBUG:root:Remove the file with id: 5e88b8a2f1ace295e9d55147 from the DB
+DEBUG:root:Remove the file with id: 5e88b9378c690124bdcd7fb0 from the DB
+DEBUG:root:Remove the file with id: 5e88b94a8ee8e4e736ecb8f9 from the DB
+DEBUG:root:Remove the file with id: 5e88b95c84733955f0a4b5bf from the DB
+DEBUG:root:Remove the file with id: 5e88b966b9b93d75f530268c from the DB
+DEBUG:root:Remove the file with id: 5e88b97730a9a33a71e7ef2e from the DB
+DEBUG:root:Remove the file with id: 5e88b980f4a90dceaa0a9c07 from the DB
+DEBUG:root:Remove the file with id: 5e88b9827009691723caab3c from the DB
+DEBUG:root:Remove the file with id: 5e88b98a56092eae22b59dca from the DB
+DEBUG:root:Remove the file with id: 5e88b9961d6626970aa66524 from the DB
+DEBUG:root:Remove the file with id: 5e88b9aaee88bfd56c7cad28 from the DB
+DEBUG:root:Remove the file with id: 5e88b9b8029a7179727f9a73 from the DB
+DEBUG:root:Remove the file with id: 5e88b9f5345f5b5087e16ce1 from the DB
+DEBUG:root:Remove the file with id: 5e88b9fa436dbe745701409e from the DB
+DEBUG:root:Get the file names from the tmp_gen_editor_imgs/ directory
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide4.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide3.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide0.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide1.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide5.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide2.png
+DEBUG:root:Store the file data
+DEBUG:root:Get the settings.json
+DEBUG:root:MongoDB connection is initiated
+DEBUG:root:Remove all the files in the assets collection
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide4.png
+DEBUG:root:Remove the file with id: 5e88c98983fd3b4e883dc61c from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide3.png
+DEBUG:root:Remove the file with id: 5e88c98983fd3b4e883dc61e from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide0.png
+DEBUG:root:Remove the file with id: 5e88c98983fd3b4e883dc620 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide1.png
+DEBUG:root:Remove the file with id: 5e88c98983fd3b4e883dc622 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide5.png
+DEBUG:root:Remove the file with id: 5e88c98983fd3b4e883dc624 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide2.png
+DEBUG:root:Remove the file with id: 5e88c98983fd3b4e883dc626 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide4.png
+DEBUG:root:Remove the file with id: 5e88c9977b26c62939919f45 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide3.png
+DEBUG:root:Remove the file with id: 5e88c9977b26c62939919f47 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide0.png
+DEBUG:root:Remove the file with id: 5e88c9977b26c62939919f49 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide1.png
+DEBUG:root:Remove the file with id: 5e88c9977b26c62939919f4b from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide5.png
+DEBUG:root:Remove the file with id: 5e88c9977b26c62939919f4d from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide2.png
+DEBUG:root:Remove the file with id: 5e88c9977b26c62939919f4f from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide4.png
+DEBUG:root:Remove the file with id: 5e88c9e52b8dc885f3c2470d from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide3.png
+DEBUG:root:Remove the file with id: 5e88c9e52b8dc885f3c2470f from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide0.png
+DEBUG:root:Remove the file with id: 5e88c9e52b8dc885f3c24711 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide1.png
+DEBUG:root:Remove the file with id: 5e88c9e52b8dc885f3c24713 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide5.png
+DEBUG:root:Remove the file with id: 5e88c9e52b8dc885f3c24715 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide2.png
+DEBUG:root:Remove the file with id: 5e88c9e52b8dc885f3c24717 from the DB
+DEBUG:root:Get the file names from the tmp_gen_editor_imgs/ directory
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide4.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide3.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide0.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide1.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide5.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide2.png
+DEBUG:root:Store the file data
+DEBUG:root:Get the settings.json
+DEBUG:root:MongoDB connection is initiated
+DEBUG:root:Remove all the files in the assets collection
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide4.png
+DEBUG:root:Remove the file with id: 5e88c98983fd3b4e883dc61c from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide3.png
+DEBUG:root:Remove the file with id: 5e88c98983fd3b4e883dc61e from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide0.png
+DEBUG:root:Remove the file with id: 5e88c98983fd3b4e883dc620 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide1.png
+DEBUG:root:Remove the file with id: 5e88c98983fd3b4e883dc622 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide5.png
+DEBUG:root:Remove the file with id: 5e88c98983fd3b4e883dc624 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide2.png
+DEBUG:root:Remove the file with id: 5e88c98983fd3b4e883dc626 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide4.png
+DEBUG:root:Remove the file with id: 5e88c9977b26c62939919f45 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide3.png
+DEBUG:root:Remove the file with id: 5e88c9977b26c62939919f47 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide0.png
+DEBUG:root:Remove the file with id: 5e88c9977b26c62939919f49 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide1.png
+DEBUG:root:Remove the file with id: 5e88c9977b26c62939919f4b from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide5.png
+DEBUG:root:Remove the file with id: 5e88c9977b26c62939919f4d from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide2.png
+DEBUG:root:Remove the file with id: 5e88c9977b26c62939919f4f from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide4.png
+DEBUG:root:Remove the file with id: 5e88c9e52b8dc885f3c2470d from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide3.png
+DEBUG:root:Remove the file with id: 5e88c9e52b8dc885f3c2470f from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide0.png
+DEBUG:root:Remove the file with id: 5e88c9e52b8dc885f3c24711 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide1.png
+DEBUG:root:Remove the file with id: 5e88c9e52b8dc885f3c24713 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide5.png
+DEBUG:root:Remove the file with id: 5e88c9e52b8dc885f3c24715 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide2.png
+DEBUG:root:Remove the file with id: 5e88c9e52b8dc885f3c24717 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide4.png
+DEBUG:root:Remove the file with id: 5e88ca05d631e15a44e181c6 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide3.png
+DEBUG:root:Remove the file with id: 5e88ca05d631e15a44e181c8 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide0.png
+DEBUG:root:Remove the file with id: 5e88ca05d631e15a44e181ca from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide1.png
+DEBUG:root:Remove the file with id: 5e88ca05d631e15a44e181cc from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide5.png
+DEBUG:root:Remove the file with id: 5e88ca05d631e15a44e181ce from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide2.png
+DEBUG:root:Remove the file with id: 5e88ca05d631e15a44e181d0 from the DB
+DEBUG:root:Get the file names from the tmp_gen_editor_imgs/ directory
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide4.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide3.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide0.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide1.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide5.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide2.png
+DEBUG:root:Store the file data
+DEBUG:root:Get the settings.json
+DEBUG:root:MongoDB connection is initiated
+DEBUG:root:Remove all the files in the assets collection
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide4.png
+DEBUG:root:Remove the file with id: 5e88ca0b2a12724e4079a08f from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide3.png
+DEBUG:root:Remove the file with id: 5e88ca0b2a12724e4079a091 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide0.png
+DEBUG:root:Remove the file with id: 5e88ca0b2a12724e4079a093 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide1.png
+DEBUG:root:Remove the file with id: 5e88ca0b2a12724e4079a095 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide5.png
+DEBUG:root:Remove the file with id: 5e88ca0b2a12724e4079a097 from the DB
+DEBUG:root:Remove file: tmp_gen_editor_imgs/Slide2.png
+DEBUG:root:Remove the file with id: 5e88ca0b2a12724e4079a099 from the DB
+DEBUG:root:Get the file names from the tmp_gen_editor_imgs/ directory
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide4.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide3.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide0.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide1.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide5.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide2.png
+DEBUG:root:Store the file data
