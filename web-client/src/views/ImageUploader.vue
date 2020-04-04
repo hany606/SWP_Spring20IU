@@ -31,7 +31,7 @@ export default {
       this.url = URL.createObjectURL(this.file);
     },
     onSubmit() {
-      const path = `http://localhost:5000/edit/${this.pres}`;
+      const path = `http://10.90.138.113:5000/edit/${this.pres}`;
 
       const formData = new FormData();
       formData.append('image', this.file);

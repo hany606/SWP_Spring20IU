@@ -34,7 +34,6 @@ def url_create():
 
 @app.route('/edit/<id>', methods = ["GET", "POST"])
 def url_edit(id):
-    print(presentations)
     current_presentation = {}
     for p in presentations:
         if p['id'] == id:
@@ -45,11 +44,11 @@ def url_edit(id):
         return jsonify(current_presentation)
     else:
         img = request.files['image']
-        img_string = base64.b64encode(img.read())
+        img_string = str(base64.b64encode(img.read()))[2:-1]
+        print(type(img_string))
         current_presentation['slides'].append(img_string)
-        print(current_presentation['slides'])
         return jsonify(current_presentation)
 
 if __name__ == "__main__":
     new_id = ''
-    app.run(debug = True)
+    app.run(host='0.0.0.0', debug = True)

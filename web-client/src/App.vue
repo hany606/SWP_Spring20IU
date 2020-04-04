@@ -123,7 +123,7 @@ export default {
     newPres: Create,
   },
   created() {
-    const path = 'http://localhost:5000/create';
+    const path = 'http://10.90.138.113:5000/create';
     axios.post(path).then((response) => {
       this.id = response.data.id;
     });
@@ -133,7 +133,7 @@ export default {
       const f = e.target.files[0];
       this.file = f;
 
-      const path = `http://localhost:5000/edit/${this.id}`;
+      const path = `http://10.90.138.113:5000/edit/${this.id}`;
 
       const formData = new FormData();
       formData.append('image', this.file);
