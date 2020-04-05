@@ -1,39 +1,114 @@
 <template>
 <v-container fluid>
-  <v-row class="mb-6">
-    <v-col>
-      <h1>{{ title }}</h1>
-      <img v-bind:src="'data:image/jpeg;base64,'+this.slides[0]" height="600" width="800" contain/>
-      <imgUpload v-bind:pres="this.id"></imgUpload>
-    </v-col>
-  </v-row>
+  <v-row>
+      <v-col>
+        <v-content>
+          <v-row justify="center">
+            <v-col cols="6">
+                <v-container
+                  class="grey lighten-4"
+                >
+                  <v-text-field
+                    label="Title"
+                    v-model="title"
+                    @change="onTitleChange">
+                  </v-text-field>
+                  <v-carousel v-model="current">
+                    <v-carousel-item
+                    v-for="(slide, i) in slides"
+                    :key="i"
+                    :src="'data:image/jpeg;base64,'+slide"
+                    align="middle"
+                    contain
+                    ></v-carousel-item>
+                  </v-carousel>
+                </v-container>
+                <v-row justify="center">
+                  <v-col cols="1">
+                    <v-btn class="mx-2" fab dark color="green" @click="onAddSlide">
+                      <v-icon dark>mdi-plus</v-icon>
+                    </v-btn>
+                  </v-col>
+                  <v-col>
+                  <v-file-input
+                    type="file"
+                    accept="image/*"
+                    id="file"
+                    ref="file"
+                    label="Choose Image"
+                    solo
+                    hide-details
+                    @change="onFileChange"/>
+                  </v-col>
+                </v-row>
+            </v-col>
+          </v-row>
+        </v-content>
+      </v-col>
+    </v-row>
 </v-container>
 </template>
 
+
 <script>
 import axios from 'axios';
-import ImageUploader from '@/views/ImageUploader.vue';
-
 
 export default {
   name: 'Edit',
+
   data() {
     return {
       id: this.$route.params.id,
-      title: '',
+      title: 'Untitled',
       slides: [],
+      file: null,
       current: 0,
     };
   },
-  components: {
-    imgUpload: ImageUploader,
-  },
   created() {
-    const path = `http://localhost:5000/edit/${this.id}`;
-    axios.get(path).then((response) => {
-      this.title = response.data.title;
-      this.slides = response.data.slides;
+    const path = `http://10.90.138.113:5000/edit/${this.id}/${this.current}`;
+    axios.get(path).then((res) => {
+      this.title = res.data.title;
+      this.slides = res.data.slides;
     });
+  },
+  methods: {
+    onFileChange(e) {
+      const f = e;
+      this.file = f;
+
+      const path = `http://10.90.138.113:5000/edit/${this.id}/${this.current}`;
+
+      const formData = new FormData();
+      formData.append('image', this.file);
+      const headers = {
+        'Content-Type': 'multipart/form-data',
+      };
+      axios.post(path, formData, headers).then((response) => {
+        this.title = response.data.title;
+        this.slides = response.data.slides;
+      });
+    },
+    onAddSlide() {
+      const path = `http://10.90.138.113:5000/add_slide/${this.id}`;
+      axios.post(path).then((response) => {
+        this.title = response.data.title;
+        this.slides = response.data.slides;
+      });
+    },
+    onTitleChange() {
+      const path = `http://10.90.138.113:5000/edit/${this.id}/${this.current}`;
+
+      const formData = new FormData();
+      formData.append('title', this.title);
+      const headers = {
+        'Content-Type': 'multipart/form-data',
+      };
+      axios.post(path, formData, headers).then((response) => {
+        this.title = response.data.title;
+        this.slides = response.data.slides;
+      });
+    },
   },
 };
 </script>
