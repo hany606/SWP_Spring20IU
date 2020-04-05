@@ -3024,3 +3024,86 @@ DEBUG:root:Reading the file: tmp/tutorial1_Slide2.gltf
 DEBUG:root:Store the file data
 DEBUG:root:Reading the file: tmp/tutorial1_Slide2.png
 DEBUG:root:Store the file data
+DEBUG:root:Get the settings.json
+DEBUG:root:MongoDB connection is initiated
+DEBUG:root:Remove all the files in the assets collection
+DEBUG:root:Remove the file with id: 5e89013fd1e17ecb48329f21 from the DB
+DEBUG:root:Remove the file with id: 5e89013fd1e17ecb48329f23 from the DB
+DEBUG:root:Remove the file with id: 5e89013fd1e17ecb48329f25 from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f27 from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f29 from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f2b from the DB
+DEBUG:root:Remove all the files in the assets collection
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f2d from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f2f from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f31 from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f33 from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f35 from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f37 from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f39 from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f3b from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f3d from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f3f from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f41 from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f43 from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f45 from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f47 from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f49 from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f4b from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f4d from the DB
+DEBUG:root:Remove the file with id: 5e890140d1e17ecb48329f4f from the DB
+DEBUG:root:Get the file names from the tmp_gen_editor_imgs/ directory
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide4.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide3.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide0.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide1.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide5.png
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp_gen_editor_imgs/Slide2.png
+DEBUG:root:Store the file data
+DEBUG:root:Read the file data with id: 5e8a21c3f2042edba43cfe27 from the DB
+DEBUG:root:Reading the file: tmp/tutorial1_Slide4.bin
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp/tutorial1_Slide4.gltf
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp/tutorial1_Slide4.png
+DEBUG:root:Store the file data
+DEBUG:root:Read the file data with id: 5e8a21c3f2042edba43cfe29 from the DB
+DEBUG:root:Reading the file: tmp/tutorial1_Slide3.bin
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp/tutorial1_Slide3.gltf
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp/tutorial1_Slide3.png
+DEBUG:root:Store the file data
+DEBUG:root:Read the file data with id: 5e8a21c3f2042edba43cfe2b from the DB
+DEBUG:root:Reading the file: tmp/tutorial1_Slide0.bin
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp/tutorial1_Slide0.gltf
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp/tutorial1_Slide0.png
+DEBUG:root:Store the file data
+DEBUG:root:Read the file data with id: 5e8a21c3f2042edba43cfe2d from the DB
+DEBUG:root:Reading the file: tmp/tutorial1_Slide1.bin
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp/tutorial1_Slide1.gltf
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp/tutorial1_Slide1.png
+DEBUG:root:Store the file data
+DEBUG:root:Read the file data with id: 5e8a21c3f2042edba43cfe2f from the DB
+DEBUG:root:Reading the file: tmp/tutorial1_Slide5.bin
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp/tutorial1_Slide5.gltf
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp/tutorial1_Slide5.png
+DEBUG:root:Store the file data
+DEBUG:root:Read the file data with id: 5e8a21c3f2042edba43cfe31 from the DB
+DEBUG:root:Reading the file: tmp/tutorial1_Slide2.bin
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp/tutorial1_Slide2.gltf
+DEBUG:root:Store the file data
+DEBUG:root:Reading the file: tmp/tutorial1_Slide2.png
+DEBUG:root:Store the file data

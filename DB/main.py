@@ -2,6 +2,8 @@ from utils import *
 from img2gltf import Img2GLTF
 import os
 from PIL import Image
+from base64 import b64decode
+
 
 
 logging.basicConfig(filename='log.log',level=logging.DEBUG)
@@ -40,17 +42,24 @@ os.mkdir("tmp")
 for r in res:
     file_name = r["filename"]
     # Get the image raw_data
-    data = read_file(fs_editor, r["_id"])
+    data = get_file(fs_editor, r["_id"])
     # Change it to image
-    img = Image.open(BytesIO(data))
+    imgdata = base64.b64decode(data)
+    
+    with open("tmp/"+file_name, 'wb') as f:
+        f.write(imgdata)
+
+    # img = Image.open(BytesIO(data))
     # Save the image temporary in the tmp folder
-    img.save("tmp/"+file_name)
+    # img.save("tmp/"+file_name)
+
+
     # Create Slide (.gltf, .bin) and save it in the tmp with .png
     conv.create_slide("tmp/",file_name[:-4])
     # store .bin .gltf .png into arapp collection 
     store_file(fs_app, "tmp/"+file_name[:-4]+".bin", file_name[:-4]+".bin")
     store_file(fs_app, "tmp/"+file_name[:-4]+".gltf", file_name[:-4]+".gltf")
-    store_file(fs_app, "tmp/"+file_name, file_name)
+    store_file(fs_app, "tmp/"+file_name, file_name, flag="img")
     # Delete them from the tmp folder
     os.remove("tmp/"+file_name[:-4]+".bin")
     os.remove("tmp/"+file_name[:-4]+".gltf")

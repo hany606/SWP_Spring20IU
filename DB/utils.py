@@ -5,8 +5,9 @@ import gridfs
 import logging
 from os import walk
 from PIL import Image
-from bson import Binary
 from io import BytesIO
+import base64
+
 
 def get_settings(file_name="settings.json"):
     with open(file_name) as f:
@@ -22,10 +23,11 @@ def init_mongodb(settings):
 def store_file(fs, file_path, stored_file_name, flag=None):
     logging.debug('Reading the file: {:}'.format(file_path))
     if(flag == "img"):
-        img = Image.open(file_path)
-        imgByteArr = BytesIO()
-        img.save(imgByteArr, format='PNG')
-        data = imgByteArr.getvalue()
+        # img = Image.open(file_path)
+        # imgByteArr = BytesIO()
+        # img.save(imgByteArr, format='PNG')
+        # data = imgByteArr.getvalue()
+        data = base64.b64encode(open(file_path, "rb").read())
 
     else:
         with open(file_path, "rb") as f:
@@ -36,7 +38,7 @@ def store_file(fs, file_path, stored_file_name, flag=None):
 
 
 # https://stackoverflow.com/questions/27761674/retrieving-files-in-gridfs-to-be-sent-from-flask
-def read_file(fs, file_id):
+def get_file(fs, file_id):
     logging.debug('Read the file data with id: {:} from the DB'.format(file_id))
     outputdata = fs.get(file_id).read()
     return outputdata
