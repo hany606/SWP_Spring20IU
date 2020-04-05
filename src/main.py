@@ -20,9 +20,11 @@ app = Flask(__name__)
 CORS(app)
 #images are base64 encoded!
 
-#NEED TO MAKE TO WORK WITH DB
+
 @app.route('/', methods = ["GET"])
 def url_explore():
+    db = db_connect(DB_CREDENTIALS)
+    presentations = [pres for pres in db.presentations.find()]
     return jsonify(presentations)
 
 
@@ -51,9 +53,10 @@ def url_edit(id, index):
         return jsonify(pres)
     else:
         try:
-            ##ADD DB HERE
             title = request.form['title']
             pres['title'] = title
+            db = db_connect(DB_CREDENTIALS)
+            db.presentations.update_one({'id': id}, {'$set': {'title': pres['title']}})
         except KeyError: 
             img = request.files['image']
             img_string = str(base64.b64encode(img.read()))[2:-1]
@@ -62,6 +65,7 @@ def url_edit(id, index):
             db.presentations.update_one({'id': id}, {'$set': {'slides': pres['slides']}})
         print("Presentation is updated and saved to the database")
         return jsonify(pres)
+
 
 @app.route('/add_slide/<id>', methods = ["GET", "POST"])
 def url_add_slide(id):
@@ -77,6 +81,7 @@ def url_add_slide(id):
         db.presentations.update_one({'id': id}, {'$set': {'slides': pres['slides']}})
         print("Presentation is updated and saved to the database")
         return jsonify(pres)
+
 
 if __name__ == "__main__":
     with open("credentials.txt") as f:
