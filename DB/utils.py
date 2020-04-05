@@ -4,9 +4,9 @@ import json
 import gridfs
 import logging
 from os import walk
-from PIL import Image
-from io import BytesIO
-import base64
+# from PIL import Image
+# from io import BytesIO
+from base64 import b64encode
 
 
 def get_settings(file_name="settings.json"):
@@ -27,7 +27,7 @@ def store_file(fs, file_path, stored_file_name, flag=None):
         # imgByteArr = BytesIO()
         # img.save(imgByteArr, format='PNG')
         # data = imgByteArr.getvalue()
-        data = base64.b64encode(open(file_path, "rb").read())
+        data = b64encode(open(file_path, "rb").read())
 
     else:
         with open(file_path, "rb") as f:

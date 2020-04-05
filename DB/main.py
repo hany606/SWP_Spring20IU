@@ -44,7 +44,7 @@ for r in res:
     # Get the image raw_data
     data = get_file(fs_editor, r["_id"])
     # Change it to image
-    imgdata = base64.b64decode(data)
+    imgdata = b64decode(data)
     
     with open("tmp/"+file_name, 'wb') as f:
         f.write(imgdata)
