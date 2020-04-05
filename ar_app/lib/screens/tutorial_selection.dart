@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'tutorial_running.dart';
+// import 'tutorial_running.dart';
+import 'test_grpc.dart';
 
 
 class TutorialSelection extends StatefulWidget {
@@ -44,7 +45,8 @@ Widget _myListView(BuildContext context) {
             onTap: () {
               // TODO: Pass the id of the tutorial to be run
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => TutorialRunning()));
+                  // MaterialPageRoute(builder: (context) => TutorialRunning()));
+                  MaterialPageRoute(builder: (context) => TestGRPC()));
             },
           title: Text(tutorials[index]),
           trailing: Icon(Icons.keyboard_arrow_right),

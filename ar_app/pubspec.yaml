@@ -1,11 +1,12 @@
 name: ar_app
-description: Demonstrates how to use the arcore_flutter_plugin plugin.
+description: AR app for virtual assistant.
 publish_to: 'none'
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  protobuf: any
   flutter:
     sdk: flutter
 
