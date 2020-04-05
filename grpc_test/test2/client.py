@@ -23,7 +23,7 @@ for i in response.tutorials:
     print(i)
 
 print("----------------------------------------------------")
-index = displayer_pb2.TutorialIndex(value=response.length-1)
+index = displayer_pb2.Index(value=response.length-1)
 responses = stub.GetTutorial(index)
 print(response.length)
 for response in responses.slides:

@@ -18,7 +18,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=b'\n\x0f\x64isplayer.proto\"\x07\n\x05\x45mpty\"\x1e\n\rTutorialIndex\x12\r\n\x05value\x18\x01 \x01(\x05\"1\n\x05Slide\x12\r\n\x05image\x18\x01 \x01(\x0c\x12\x0b\n\x03\x62in\x18\x02 \x01(\x0c\x12\x0c\n\x04gltf\x18\x03 \x01(\x0c\"M\n\x08Tutorial\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03_id\x18\x02 \x01(\t\x12\x0e\n\x06length\x18\x03 \x01(\x05\x12\x16\n\x06slides\x18\x04 \x03(\x0b\x32\x06.Slide\"O\n\x0cTutorialInfo\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03_id\x18\x02 \x01(\t\x12\x0e\n\x06length\x18\x03 \x01(\x05\x12\x14\n\x0cimg_data_str\x18\x04 \x01(\t\"A\n\rTutorialsList\x12\x0e\n\x06length\x18\x01 \x01(\x05\x12 \n\ttutorials\x18\x02 \x03(\x0b\x32\r.TutorialInfo2b\n\x06Helper\x12,\n\x10GetTutorialsList\x12\x06.Empty\x1a\x0e.TutorialsList\"\x00\x12*\n\x0bGetTutorial\x12\x0e.TutorialIndex\x1a\t.Tutorial\"\x00\x62\x06proto3'
+  serialized_pb=b'\n\x0f\x64isplayer.proto\"\x07\n\x05\x45mpty\"\x16\n\x05Index\x12\r\n\x05value\x18\x01 \x01(\x05\"1\n\x05Slide\x12\r\n\x05image\x18\x01 \x01(\x0c\x12\x0b\n\x03\x62in\x18\x02 \x01(\x0c\x12\x0c\n\x04gltf\x18\x03 \x01(\x0c\"M\n\x08Tutorial\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03_id\x18\x02 \x01(\t\x12\x0e\n\x06length\x18\x03 \x01(\x05\x12\x16\n\x06slides\x18\x04 \x03(\x0b\x32\x06.Slide\"O\n\x0cTutorialInfo\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03_id\x18\x02 \x01(\t\x12\x0e\n\x06length\x18\x03 \x01(\x05\x12\x14\n\x0cimg_data_str\x18\x04 \x01(\t\"A\n\rTutorialsList\x12\x0e\n\x06length\x18\x01 \x01(\x05\x12 \n\ttutorials\x18\x02 \x03(\x0b\x32\r.TutorialInfo2Z\n\x06Helper\x12,\n\x10GetTutorialsList\x12\x06.Empty\x1a\x0e.TutorialsList\"\x00\x12\"\n\x0bGetTutorial\x12\x06.Index\x1a\t.Tutorial\"\x00\x62\x06proto3'
 )
 
 
@@ -48,15 +48,15 @@ _EMPTY = _descriptor.Descriptor(
 )
 
 
-_TUTORIALINDEX = _descriptor.Descriptor(
-  name='TutorialIndex',
-  full_name='TutorialIndex',
+_INDEX = _descriptor.Descriptor(
+  name='Index',
+  full_name='Index',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='value', full_name='TutorialIndex.value', index=0,
+      name='value', full_name='Index.value', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -75,7 +75,7 @@ _TUTORIALINDEX = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=28,
-  serialized_end=58,
+  serialized_end=50,
 )
 
 
@@ -119,8 +119,8 @@ _SLIDE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=60,
-  serialized_end=109,
+  serialized_start=52,
+  serialized_end=101,
 )
 
 
@@ -171,8 +171,8 @@ _TUTORIAL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=111,
-  serialized_end=188,
+  serialized_start=103,
+  serialized_end=180,
 )
 
 
@@ -223,8 +223,8 @@ _TUTORIALINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=190,
-  serialized_end=269,
+  serialized_start=182,
+  serialized_end=261,
 )
 
 
@@ -261,14 +261,14 @@ _TUTORIALSLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=271,
-  serialized_end=336,
+  serialized_start=263,
+  serialized_end=328,
 )
 
 _TUTORIAL.fields_by_name['slides'].message_type = _SLIDE
 _TUTORIALSLIST.fields_by_name['tutorials'].message_type = _TUTORIALINFO
 DESCRIPTOR.message_types_by_name['Empty'] = _EMPTY
-DESCRIPTOR.message_types_by_name['TutorialIndex'] = _TUTORIALINDEX
+DESCRIPTOR.message_types_by_name['Index'] = _INDEX
 DESCRIPTOR.message_types_by_name['Slide'] = _SLIDE
 DESCRIPTOR.message_types_by_name['Tutorial'] = _TUTORIAL
 DESCRIPTOR.message_types_by_name['TutorialInfo'] = _TUTORIALINFO
@@ -282,12 +282,12 @@ Empty = _reflection.GeneratedProtocolMessageType('Empty', (_message.Message,), {
   })
 _sym_db.RegisterMessage(Empty)
 
-TutorialIndex = _reflection.GeneratedProtocolMessageType('TutorialIndex', (_message.Message,), {
-  'DESCRIPTOR' : _TUTORIALINDEX,
+Index = _reflection.GeneratedProtocolMessageType('Index', (_message.Message,), {
+  'DESCRIPTOR' : _INDEX,
   '__module__' : 'displayer_pb2'
-  # @@protoc_insertion_point(class_scope:TutorialIndex)
+  # @@protoc_insertion_point(class_scope:Index)
   })
-_sym_db.RegisterMessage(TutorialIndex)
+_sym_db.RegisterMessage(Index)
 
 Slide = _reflection.GeneratedProtocolMessageType('Slide', (_message.Message,), {
   'DESCRIPTOR' : _SLIDE,
@@ -325,8 +325,8 @@ _HELPER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=338,
-  serialized_end=436,
+  serialized_start=330,
+  serialized_end=420,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetTutorialsList',
@@ -342,7 +342,7 @@ _HELPER = _descriptor.ServiceDescriptor(
     full_name='Helper.GetTutorial',
     index=1,
     containing_service=None,
-    input_type=_TUTORIALINDEX,
+    input_type=_INDEX,
     output_type=_TUTORIAL,
     serialized_options=None,
   ),

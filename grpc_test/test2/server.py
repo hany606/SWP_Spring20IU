@@ -33,8 +33,7 @@ class HelperServicer(displayer_pb2_grpc.HelperServicer):
             slide = displayer_pb2.Slide(image=raw_slide["image"], bin=raw_slide["bin"], gltf=raw_slide["gltf"])
             response.slides.append(slide)
         return response
-
-
+    
 # create a gRPC server
 server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
 

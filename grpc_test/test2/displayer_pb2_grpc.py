@@ -20,7 +20,7 @@ class HelperStub(object):
                 )
         self.GetTutorial = channel.unary_unary(
                 '/Helper/GetTutorial',
-                request_serializer=displayer__pb2.TutorialIndex.SerializeToString,
+                request_serializer=displayer__pb2.Index.SerializeToString,
                 response_deserializer=displayer__pb2.Tutorial.FromString,
                 )
 
@@ -50,7 +50,7 @@ def add_HelperServicer_to_server(servicer, server):
             ),
             'GetTutorial': grpc.unary_unary_rpc_method_handler(
                     servicer.GetTutorial,
-                    request_deserializer=displayer__pb2.TutorialIndex.FromString,
+                    request_deserializer=displayer__pb2.Index.FromString,
                     response_serializer=displayer__pb2.Tutorial.SerializeToString,
             ),
     }
@@ -90,7 +90,7 @@ class Helper(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/Helper/GetTutorial',
-            displayer__pb2.TutorialIndex.SerializeToString,
+            displayer__pb2.Index.SerializeToString,
             displayer__pb2.Tutorial.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)

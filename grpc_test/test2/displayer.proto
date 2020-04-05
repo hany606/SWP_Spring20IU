@@ -5,7 +5,7 @@ message Empty {
 
 }
 
-message TutorialIndex {
+message Index {
     int32 value = 1;
 }
 
@@ -36,5 +36,5 @@ message TutorialsList {
 
 service Helper{
     rpc GetTutorialsList(Empty) returns (TutorialsList) {}
-    rpc GetTutorial(TutorialIndex) returns (Tutorial) {}
+    rpc GetTutorial(Index) returns (Tutorial) {}
 }
