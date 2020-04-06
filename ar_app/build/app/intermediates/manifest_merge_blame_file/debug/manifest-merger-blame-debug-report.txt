@@ -39,39 +39,39 @@
 30    -->
 31    <!-- android:label="AR Virtual Assistant" -->
 32    <application
-32-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:10:5-31:19
+32-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:12:5-33:19
 33        android:name="io.flutter.app.FlutterApplication"
-33-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:11:9-57
+33-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:13:9-57
 34        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 34-->[androidx.core:core:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/6df36a31058d5c5c5cc678a139da4355/core-1.0.0/AndroidManifest.xml:22:18-86
 35        android:debuggable="true"
 36        android:icon="@mipmap/ic_launcher"
-36-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:13:9-43
+36-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:15:9-43
 37        android:label="AR Virtual Assistant" >
-37-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:12:9-45
+37-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:14:9-45
 38        <activity
-38-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:14:9-25:20
+38-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:16:9-27:20
 39            android:name="com.difrancescogianmarco.example.MainActivity"
-39-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:15:13-41
+39-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:17:13-41
 40            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-40-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:18:13-163
+40-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:20:13-163
 41            android:hardwareAccelerated="true"
-41-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:19:13-47
+41-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:21:13-47
 42            android:launchMode="singleTop"
-42-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:16:13-43
+42-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:18:13-43
 43            android:theme="@style/LaunchTheme"
-43-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:17:13-47
+43-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:19:13-47
 44            android:windowSoftInputMode="adjustResize" >
-44-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:20:13-55
+44-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:22:13-55
 45            <intent-filter>
-45-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:21:13-24:29
+45-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:23:13-26:29
 46                <action android:name="android.intent.action.MAIN" />
-46-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:22:17-68
-46-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:22:25-66
+46-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:24:17-68
+46-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:24:25-66
 47
 48                <category android:name="android.intent.category.LAUNCHER" />
-48-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:23:17-76
-48-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:23:27-74
+48-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:25:17-76
+48-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:25:27-74
 49            </intent-filter>
 50        </activity>
 51        <!--
@@ -79,11 +79,11 @@
 53             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
 54        -->
 55        <meta-data
-55-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:28:9-30:33
+55-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:30:9-32:33
 56            android:name="flutterEmbedding"
-56-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:29:13-44
+56-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:31:13-44
 57            android:value="2" />
-57-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:30:13-30
+57-->/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:32:13-30
 58        <!--
 59             Indicates that app requires ARCore ("AR Required"). Causes Google
 60             Play Store to download and install ARCore when the app is installed.
