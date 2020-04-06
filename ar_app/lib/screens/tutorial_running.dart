@@ -24,7 +24,8 @@ class _TutorialRunningState extends State<TutorialRunning> {
   List<List<double>> rotations_raw = [[0, 1, 0, 1],[0, 1, 0, 1.25], [0, 1, 0, 1.5],[0, 1, 0, 1.75], [0, 1, 0, 2]];
   List<vector.Vector4> rotations = new List();
 
-  List<String> slides = ["https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide1.gltf",
+  List<String> slides = ["https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial2/Slide0.gltf",
+                         "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide1.gltf",
                          "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide2.gltf",
                          "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide3.gltf",
                          "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide4.gltf",
@@ -49,6 +50,7 @@ class _TutorialRunningState extends State<TutorialRunning> {
             ),
             SlideControl(
               initialSlideIdx: slideIdx,
+              maxSlideIdx: slides.length,
               onSlideChange: onSlideChange,
             ),
           ],
@@ -115,13 +117,14 @@ class SlideControl extends StatefulWidget {
   // TODO: Configurations that will be set from the file of the tutorial describtion
   final int initialSlideIdx;
   final int minSlideIdx = 0;
-  final int maxSlideIdx = 5-1;
+  final int maxSlideIdx;
   
   final ValueChanged<int> onSlideChange;
 
   const SlideControl(
       {Key key,
       this.initialSlideIdx,
+      this.maxSlideIdx,
       this.onSlideChange})
       : super(key: key);
 
