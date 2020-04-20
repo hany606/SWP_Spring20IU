@@ -32,7 +32,7 @@ For example:
 
 * For working in parallel on different ways for the same feature, another branch can be created.
 ```bash
-  git chcekout -b <branch_name>
+  git checkout -b <branch_name>
   git push origin <branch_name>
 ```
 
