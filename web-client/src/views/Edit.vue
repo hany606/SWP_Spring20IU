@@ -23,17 +23,17 @@
           <v-col>
             <v-container fluid>
               <v-row>
-                <v-col cols="1">
+                <v-col lg="1">
                   <v-btn dark color="green" @click="onAddSlide">
                     <v-icon dark>mdi-plus</v-icon>
                   </v-btn>
                 </v-col>
-                <v-col cols="1">
+                <v-col lg="1">
                   <v-btn dark color="green" @click="onDeleteSlide">
                     <v-icon dark>mdi-minus</v-icon>
                   </v-btn>
                 </v-col>
-                <v-col cols="8">
+                <v-col lg="8">
                   <v-file-input
                     type="file"
                     accept="image/*"
@@ -45,7 +45,7 @@
                     hide-details
                     @change="onFileChange"/>
                 </v-col>
-                <v-col cols="1">
+                <v-col lg="1">
                   <v-btn depressed color="error" @click="onDeletePres">Delete</v-btn>
                 </v-col>
               </v-row>
