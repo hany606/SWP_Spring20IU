@@ -23,18 +23,14 @@
           <v-col>
             <v-container fluid>
               <v-row>
-                <v-col lg="1">
-                  <v-btn dark color="green" @click="onAddSlide">
-                    <v-icon dark>mdi-plus</v-icon>
-                  </v-btn>
-                </v-col>
-                <v-col lg="1">
-                  <v-btn dark color="green" @click="onDeleteSlide">
-                    <v-icon dark>mdi-minus</v-icon>
-                  </v-btn>
-                </v-col>
-                <v-col lg="8">
+                <v-btn class="mx-2" dark color="green" @click="onAddSlide">
+                  <v-icon dark>mdi-plus</v-icon>
+                </v-btn>
+                <v-btn class="mx-2" dark color="green" @click="onDeleteSlide">
+                  <v-icon dark>mdi-minus</v-icon>
+                </v-btn>
                   <v-file-input
+                    class="mx-2"
                     type="file"
                     accept="image/*"
                     id="file"
@@ -44,10 +40,7 @@
                     dense
                     hide-details
                     @change="onFileChange"/>
-                </v-col>
-                <v-col lg="1">
-                  <v-btn depressed color="error" @click="onDeletePres">Delete</v-btn>
-                </v-col>
+                  <v-btn class="mx-2" depressed color="error" @click="onDeletePres">Delete</v-btn>
               </v-row>
             </v-container>
           </v-col>
