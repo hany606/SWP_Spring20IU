@@ -25,6 +25,8 @@ CORS(app)
 def url_explore():
     db = db_connect(DB_CREDENTIALS)
     presentations = [pres for pres in db.presentations.find()]
+    for p in presentations:
+        p.pop('_id')
     return jsonify(presentations)
 
 
