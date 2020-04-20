@@ -59,13 +59,13 @@ def url_edit(id, index):
             pres['title'] = title
             db = db_connect(DB_CREDENTIALS)
             db.presentations.update_one({'id': id}, {'$set': {'title': pres['title']}})
-        except KeyError: 
-            img = request.files['image']
-            img_string = str(base64.b64encode(img.read()))[2:-1]
-            pres['slides'][int(index)] = img_string
-            db = db_connect(DB_CREDENTIALS)
-            db.presentations.update_one({'id': id}, {'$set': {'slides': pres['slides']}})
-        print("Presentation is updated and saved to the database")
+        except KeyError:
+            if len(pres['slides']) > 0:
+                img = request.files['image']
+                img_string = str(base64.b64encode(img.read()))[2:-1]
+                pres['slides'][int(index)] = img_string
+                db = db_connect(DB_CREDENTIALS)
+                db.presentations.update_one({'id': id}, {'$set': {'slides': pres['slides']}})
         return jsonify(pres)
 
 
