@@ -85,6 +85,33 @@ def url_add_slide(id):
         return jsonify(pres)
 
 
+@app.route('/delete_slide/<id>/<slide_id>', methods = ["GET", "POST"])
+def url_del_slide(id, slide_id):
+    db = db_connect(DB_CREDENTIALS)
+    pres = db.presentations.find_one({'id': id})
+    pres.pop('_id')
+
+    if request.method == 'GET':
+        return jsonify(pres)
+    else:
+        pres['slides'].pop(int(slide_id))
+        db = db_connect(DB_CREDENTIALS)
+        print(len(db.presentations.find_one({'id': id})['slides']))
+        db.presentations.update_one({'id': id}, {'$set': {'slides': pres['slides']}})
+        print(len(db.presentations.find_one({'id': id})['slides']))
+        return jsonify(pres)
+
+
+@app.route('/delete_pres/<id>', methods=["GET", "POST"])
+def url_del_pres(id):
+    db = db_connect(DB_CREDENTIALS)
+    if request.method == 'GET':
+        return "OK"
+    else:
+        db.presentations.delete_one({'id': id})
+        return "OK"
+
+
 if __name__ == "__main__":
     with open("credentials.txt") as f:
         DB_CREDENTIALS = f.read()
