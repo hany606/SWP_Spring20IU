@@ -1,10 +1,13 @@
 <template>
 <v-container fluid>
-  <v-row dense>
+  <v-spacer/>
+  <v-row
+    dense
+  >
     <v-col
       v-for="pres in presentations"
       :key="pres.id"
-      :cols="2"
+      cols="2"
     >
       <v-card>
         <router-link v-bind:to="'/edit/' + pres.id">
@@ -13,8 +16,8 @@
           class="white--text align-end"
           height="200px"
         >
-          <v-card-title v-text="pres.title"></v-card-title>
         </v-img>
+        <v-card-title v-text="pres.title"></v-card-title>
         </router-link>
       </v-card>
     </v-col>
