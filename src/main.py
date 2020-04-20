@@ -88,16 +88,14 @@ def url_add_slide(id):
 def url_del_slide(id, slide_id):
     db = db_connect(DB_CREDENTIALS)
     pres = db.presentations.find_one({'id': id})
+    pres.pop('_id')
     if len(pres['slides']) == 0:
         return jsonify(pres)
-    pres.pop('_id')
     if request.method == 'GET':
         return jsonify(pres)
     else:
         pres['slides'].pop(int(slide_id))
-        print(len(db.presentations.find_one({'id': id})['slides']))
         db.presentations.update_one({'id': id}, {'$set': {'slides': pres['slides']}})
-        print(len(db.presentations.find_one({'id': id})['slides']))
         return jsonify(pres)
 
 
