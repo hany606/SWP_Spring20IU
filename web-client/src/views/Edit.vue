@@ -1,53 +1,56 @@
 <template>
 <v-container fluid>
-  <v-row>
-      <v-col>
-        <v-content>
-          <v-row justify="center">
-            <v-col cols="6">
-                <v-container
-                  class="grey lighten-4"
-                >
-                  <v-text-field
-                    label="Title"
-                    v-model="title"
-                    @change="onTitleChange">
-                  </v-text-field>
-                  <v-carousel v-model="current">
-                    <v-carousel-item
-                    v-for="(slide, i) in slides"
-                    :key="i"
-                    :src="'data:image/jpeg;base64,'+slide"
-                    align="middle"
-                    contain
-                    ></v-carousel-item>
-                  </v-carousel>
-                </v-container>
-                <v-row justify="center">
-                  <v-col cols="1">
-                    <v-btn class="mx-2" fab dark color="green" @click="onAddSlide">
-                      <v-icon dark>mdi-plus</v-icon>
-                    </v-btn>
-                  </v-col>
-                  <v-col>
+  <v-row justify="center">
+    <v-col cols="6">
+      <v-container
+        class="grey lighten-4"
+      >
+        <v-text-field
+          label="Title"
+          v-model="title"
+          @change="onTitleChange">
+        </v-text-field>
+        <v-carousel v-model="current">
+          <v-carousel-item
+            v-for="(slide, i) in slides"
+            :key="i"
+            :src="'data:image/jpeg;base64,'+slide"
+            align="middle"
+            contain
+          ></v-carousel-item>
+        </v-carousel>
+        <v-row>
+          <v-col>
+            <v-container fluid>
+              <v-row>
+                <v-btn class="mx-2" dark color="green" @click="onAddSlide">
+                  <v-icon dark>mdi-plus</v-icon>
+                </v-btn>
+                <v-btn class="mx-2" dark color="green" @click="onDeleteSlide">
+                  <v-icon dark>mdi-minus</v-icon>
+                </v-btn>
                   <v-file-input
+                    class="mx-2"
                     type="file"
                     accept="image/*"
                     id="file"
                     ref="file"
                     label="Choose Image"
                     solo
+                    dense
                     hide-details
                     @change="onFileChange"/>
-                  </v-col>
-                </v-row>
-            </v-col>
-          </v-row>
-        </v-content>
-      </v-col>
-    </v-row>
+                  <v-btn class="mx-2" depressed color="error" @click="onDeletePres">Delete</v-btn>
+              </v-row>
+            </v-container>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-col>
+  </v-row>
 </v-container>
 </template>
+
 
 
 <script>
@@ -94,7 +97,20 @@ export default {
       axios.post(path).then((response) => {
         this.title = response.data.title;
         this.slides = response.data.slides;
+        this.current = this.slides.length - 1;
       });
+    },
+    onDeleteSlide() {
+      const path = `http://10.90.138.113:5000/delete_slide/${this.id}/${this.current}`;
+      axios.post(path).then((response) => {
+        this.title = response.data.title;
+        this.slides = response.data.slides;
+      });
+    },
+    onDeletePres() {
+      const path = `http://10.90.138.113:5000/delete_pres/${this.id}`;
+      axios.post(path);
+      this.$router.push('../');
     },
     onTitleChange() {
       const path = `http://10.90.138.113:5000/edit/${this.id}/${this.current}`;

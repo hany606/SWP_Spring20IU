@@ -4,7 +4,8 @@ from pymongo import MongoClient
 import json
 import uuid
 import base64
-
+from io import BytesIO
+from PIL import Image
 
 DB_CREDENTIALS = ""
 
@@ -25,6 +26,8 @@ CORS(app)
 def url_explore():
     db = db_connect(DB_CREDENTIALS)
     presentations = [pres for pres in db.presentations.find()]
+    for p in presentations:
+        p.pop('_id')
     return jsonify(presentations)
 
 
@@ -57,13 +60,13 @@ def url_edit(id, index):
             pres['title'] = title
             db = db_connect(DB_CREDENTIALS)
             db.presentations.update_one({'id': id}, {'$set': {'title': pres['title']}})
-        except KeyError: 
-            img = request.files['image']
-            img_string = str(base64.b64encode(img.read()))[2:-1]
-            pres['slides'][int(index)] = img_string
-            db = db_connect(DB_CREDENTIALS)
-            db.presentations.update_one({'id': id}, {'$set': {'slides': pres['slides']}})
-        print("Presentation is updated and saved to the database")
+        except KeyError:
+            if len(pres['slides']) > 0:
+                img = request.files['image']
+                img_string = str(base64.b64encode(img.read()))[2:-1]
+                pres['slides'][int(index)] = img_string
+                db = db_connect(DB_CREDENTIALS)
+                db.presentations.update_one({'id': id}, {'$set': {'slides': pres['slides']}})
         return jsonify(pres)
 
 
@@ -76,11 +79,40 @@ def url_add_slide(id):
     if request.method == 'GET':
         return jsonify(pres)
     else:
-        pres['slides'].append("")
-        db = db_connect(DB_CREDENTIALS)
+        img = Image.open('blank.png')
+        buffered = BytesIO()
+        img.save(buffered, format="PNG")
+        img_str = base64.b64encode(buffered.getvalue())
+        img_str = str(img_str)[2:-1]
+        pres['slides'].append(img_str)
         db.presentations.update_one({'id': id}, {'$set': {'slides': pres['slides']}})
         print("Presentation is updated and saved to the database")
         return jsonify(pres)
+
+
+@app.route('/delete_slide/<id>/<slide_id>', methods = ["GET", "POST"])
+def url_del_slide(id, slide_id):
+    db = db_connect(DB_CREDENTIALS)
+    pres = db.presentations.find_one({'id': id})
+    pres.pop('_id')
+    if len(pres['slides']) == 0:
+        return jsonify(pres)
+    if request.method == 'GET':
+        return jsonify(pres)
+    else:
+        pres['slides'].pop(int(slide_id))
+        db.presentations.update_one({'id': id}, {'$set': {'slides': pres['slides']}})
+        return jsonify(pres)
+
+
+@app.route('/delete_pres/<id>', methods=["GET", "POST"])
+def url_del_pres(id):
+    db = db_connect(DB_CREDENTIALS)
+    if request.method == 'GET':
+        return "OK"
+    else:
+        db.presentations.delete_one({'id': id})
+        return "OK"
 
 
 if __name__ == "__main__":

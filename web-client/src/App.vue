@@ -1,9 +1,8 @@
 
 <template>
-  <v-app id="keep">
+  <v-app>
     <v-app-bar
       app
-      clipped-left
       color="green"
     >
       <v-app-bar-nav-icon @click="drawer = !drawer" />
@@ -23,7 +22,9 @@
         <newPres></newPres>
       </v-toolbar-items>
     </v-app-bar>
-    <router-view/>
+    <v-content>
+      <router-view/>
+    </v-content>
   </v-app>
 </template>
 
