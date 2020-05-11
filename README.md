@@ -1,5 +1,11 @@
 # SWP_Spring20IU
-This repository is for the implementation of the project for Software Project Course in Innopolis University for Spring 2020. The project is to create a Mixed-Reality Virtual Assistant that works with MR devices like Hololens
+This repository is for the implementation of the project for Software Project Course in Innopolis University for Spring 2020. The project is to create a Mixed-Reality Virtual Assistant that works with MR devices like Hololens and to create a web interface that you can create throught it a presentations that consist of multiple slides with images, text, ...etc.
+
+## Table of contents
+
+*  [Notes for Development](#notes-for-development)
+
+*  [Deployment instructions](#deployment-instructions)
 
 ## Notes for Development:
 
@@ -48,3 +54,4 @@ To run the application, frontend and backend servers must be lauched.
 ```
     python3 main.py
 ```
+* to download and setup the ar assistant android app, find the apk [here](https://github.com/hany606/SWP_Spring20IU/blob/master/ar_app/build/app/outputs/apk/app.apk)
