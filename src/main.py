@@ -4,7 +4,8 @@ from pymongo import MongoClient
 import json
 import uuid
 import base64
-
+from io import BytesIO
+from PIL import Image
 
 DB_CREDENTIALS = ""
 
@@ -78,7 +79,11 @@ def url_add_slide(id):
     if request.method == 'GET':
         return jsonify(pres)
     else:
-        pres['slides'].append("")
+        img = Image.open('blank.png')
+        buffered = BytesIO()
+        img.save(buffered, format="PNG")
+        img_str = base64.b64encode(buffered.getvalue())
+        pres['slides'].append(img_str)
         db.presentations.update_one({'id': id}, {'$set': {'slides': pres['slides']}})
         print("Presentation is updated and saved to the database")
         return jsonify(pres)

@@ -17,8 +17,8 @@
           height="200px"
         >
         </v-img>
-        <v-card-title v-text="pres.title"></v-card-title>
         </router-link>
+        <v-card-title v-text="pres.title"></v-card-title>
       </v-card>
     </v-col>
   </v-row>
@@ -36,7 +36,7 @@ export default {
     };
   },
   created() {
-    const path = 'http://10.90.138.113:5000/';
+    const path = 'http://localhost:5000/';
     axios.get(path).then((res) => {
       this.presentations = res.data;
       console.log(this.presentations);
@@ -44,3 +44,4 @@ export default {
   },
 };
 </script>
+
