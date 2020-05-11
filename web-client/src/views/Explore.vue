@@ -27,7 +27,6 @@
 
 <script>
 import axios from 'axios';
-
 export default {
   name: 'Explore',
   data() {
@@ -36,7 +35,7 @@ export default {
     };
   },
   created() {
-    const path = 'http://localhost:5000/';
+    const path = 'http://10.90.138.113:5000/';
     axios.get(path).then((res) => {
       this.presentations = res.data;
       console.log(this.presentations);
@@ -44,4 +43,3 @@ export default {
   },
 };
 </script>
-
