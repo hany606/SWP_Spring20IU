@@ -1,0 +1,227 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:1:1-32:12
+INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:1:1-32:12
+INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:1:1-32:12
+INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:1:1-32:12
+MERGED from [:arcore_flutter_plugin] /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/library_manifest/release/AndroidManifest.xml:2:1-31:12
+MERGED from [com.google.ar.sceneform.ux:sceneform-ux:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/b873c83a95a19bde11c897543e99b18d/jetified-sceneform-ux-1.14.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.ar.sceneform:core:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/3471fe0a5537f585b131ead75a01de8b/jetified-core-1.14.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.ar.sceneform:rendering:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/d1dd5e77fb826e6717c7738a0e0aa425/jetified-rendering-1.14.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.ar:core:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/bfd6857a846984a1c081d5569445875d/core-1.14.0/AndroidManifest.xml:17:1-46:12
+MERGED from [androidx.appcompat:appcompat:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/6e37facc71bd2834630a1deabcafbeef/appcompat-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.ar.sceneform:assets:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/48d05faa7f0e645565b4ecdeee6a4b36/assets-1.14.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.fragment:fragment:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/b97c4987b0be793c73a5fd558d70c746/fragment-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/4ffd9c4be198d315dd2acc419920a867/vectordrawable-animated-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/f73d2ad28a259282c3865228833c721e/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/c788bdc68f3b93aa16025a6b2cb4667c/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/9ca75cdb47a371e7b0195741c73ebf11/vectordrawable-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/ed9cb2ac9034ae0f15ef46ce1b060eb7/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/8d82625671bb78606637840efa8d0939/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/9a854e406273baa2239137bf9fb2303b/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/2838e90fdfa45cfe4d3d714a299ece68/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/3c6a7894f4ae5efeb1e09898acdc9677/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/d957a73e08fc8b2724f2aac971bbf9b1/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/bd3a8c5d429232d5f6c7d0cc5c090cc3/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/4076d24347973a205ace23a80e5aedf1/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/6df36a31058d5c5c5cc678a139da4355/core-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/4e0ac0e5aa57eb7182f4c062b09f6567/lifecycle-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/3fecb8644e17f69f99448982d60c6c95/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/abb7e82de3f646ba515562e8cde6813a/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/f2613bb19a8da0b5442f2e106382d0d2/versionedparcelable-1.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/6046c59b547114c22e4bea600ea7d444/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/d742a577896e1e00dcae1a0bafdebef6/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/00c7b1dd0fd2ade32add6ce6da216953/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/3ebaf077d3746dcbe9f6adcb54197476/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/4f2f57217346246b9ee6b2d1c37c107c/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/08ff29c6533e90c316f75147d5f1c971/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/97de31dc344dff02cc02b09ca02415e0/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.ar.sceneform:sceneform-base:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/d1c8a5f85a2c113b136298cd9030b902/jetified-sceneform-base-1.14.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.ar.sceneform:filament-android:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/5dd71ba2cf865f1cf664b23b5d1afa57/jetified-filament-android-1.14.0/AndroidManifest.xml:2:1-11:12
+INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:1:1-32:12
+INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:1:1-32:12
+INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:1:1-32:12
+	package
+		ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:2:5-47
+		INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:1:1-32:12
+		INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:1:1-32:12
+		INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:1:11-69
+application
+ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:10:5-31:19
+MERGED from [:arcore_flutter_plugin] /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/library_manifest/release/AndroidManifest.xml:20:5-29:19
+MERGED from [:arcore_flutter_plugin] /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/library_manifest/release/AndroidManifest.xml:20:5-29:19
+MERGED from [com.google.ar:core:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/bfd6857a846984a1c081d5569445875d/core-1.14.0/AndroidManifest.xml:30:5-44:19
+MERGED from [com.google.ar:core:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/bfd6857a846984a1c081d5569445875d/core-1.14.0/AndroidManifest.xml:30:5-44:19
+MERGED from [androidx.core:core:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/6df36a31058d5c5c5cc678a139da4355/core-1.0.0/AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/6df36a31058d5c5c5cc678a139da4355/core-1.0.0/AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/f2613bb19a8da0b5442f2e106382d0d2/versionedparcelable-1.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/f2613bb19a8da0b5442f2e106382d0d2/versionedparcelable-1.0.0/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/6df36a31058d5c5c5cc678a139da4355/core-1.0.0/AndroidManifest.xml:22:18-86
+	android:label
+		ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:12:9-45
+	android:icon
+		ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:13:9-43
+	android:name
+		ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:11:9-57
+activity#com.difrancescogianmarco.example.MainActivity
+ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:14:9-25:20
+	android:launchMode
+		ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:16:13-43
+	android:hardwareAccelerated
+		ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:19:13-47
+	android:windowSoftInputMode
+		ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:20:13-55
+	android:configChanges
+		ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:18:13-163
+	android:theme
+		ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:17:13-47
+	android:name
+		ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:15:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:21:13-24:29
+action#android.intent.action.MAIN
+ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:22:17-68
+	android:name
+		ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:22:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:23:17-76
+	android:name
+		ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:23:27-74
+meta-data#flutterEmbedding
+ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:28:9-30:33
+	android:value
+		ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:30:13-30
+	android:name
+		ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml:29:13-44
+uses-sdk
+INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml
+MERGED from [:arcore_flutter_plugin] /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:arcore_flutter_plugin] /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform.ux:sceneform-ux:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/b873c83a95a19bde11c897543e99b18d/jetified-sceneform-ux-1.14.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.ar.sceneform.ux:sceneform-ux:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/b873c83a95a19bde11c897543e99b18d/jetified-sceneform-ux-1.14.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.ar.sceneform:core:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/3471fe0a5537f585b131ead75a01de8b/jetified-core-1.14.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:core:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/3471fe0a5537f585b131ead75a01de8b/jetified-core-1.14.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:rendering:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/d1dd5e77fb826e6717c7738a0e0aa425/jetified-rendering-1.14.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:rendering:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/d1dd5e77fb826e6717c7738a0e0aa425/jetified-rendering-1.14.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar:core:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/bfd6857a846984a1c081d5569445875d/core-1.14.0/AndroidManifest.xml:26:5-28:41
+MERGED from [com.google.ar:core:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/bfd6857a846984a1c081d5569445875d/core-1.14.0/AndroidManifest.xml:26:5-28:41
+MERGED from [androidx.appcompat:appcompat:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/6e37facc71bd2834630a1deabcafbeef/appcompat-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/6e37facc71bd2834630a1deabcafbeef/appcompat-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.ar.sceneform:assets:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/48d05faa7f0e645565b4ecdeee6a4b36/assets-1.14.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:assets:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/48d05faa7f0e645565b4ecdeee6a4b36/assets-1.14.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/b97c4987b0be793c73a5fd558d70c746/fragment-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/b97c4987b0be793c73a5fd558d70c746/fragment-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/4ffd9c4be198d315dd2acc419920a867/vectordrawable-animated-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/4ffd9c4be198d315dd2acc419920a867/vectordrawable-animated-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/f73d2ad28a259282c3865228833c721e/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/f73d2ad28a259282c3865228833c721e/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/c788bdc68f3b93aa16025a6b2cb4667c/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/c788bdc68f3b93aa16025a6b2cb4667c/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/9ca75cdb47a371e7b0195741c73ebf11/vectordrawable-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/9ca75cdb47a371e7b0195741c73ebf11/vectordrawable-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/ed9cb2ac9034ae0f15ef46ce1b060eb7/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/ed9cb2ac9034ae0f15ef46ce1b060eb7/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/8d82625671bb78606637840efa8d0939/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/8d82625671bb78606637840efa8d0939/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/9a854e406273baa2239137bf9fb2303b/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/9a854e406273baa2239137bf9fb2303b/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/2838e90fdfa45cfe4d3d714a299ece68/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/2838e90fdfa45cfe4d3d714a299ece68/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/3c6a7894f4ae5efeb1e09898acdc9677/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/3c6a7894f4ae5efeb1e09898acdc9677/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/d957a73e08fc8b2724f2aac971bbf9b1/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/d957a73e08fc8b2724f2aac971bbf9b1/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/bd3a8c5d429232d5f6c7d0cc5c090cc3/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/bd3a8c5d429232d5f6c7d0cc5c090cc3/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/4076d24347973a205ace23a80e5aedf1/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/4076d24347973a205ace23a80e5aedf1/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/6df36a31058d5c5c5cc678a139da4355/core-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/6df36a31058d5c5c5cc678a139da4355/core-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/4e0ac0e5aa57eb7182f4c062b09f6567/lifecycle-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/4e0ac0e5aa57eb7182f4c062b09f6567/lifecycle-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/3fecb8644e17f69f99448982d60c6c95/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/3fecb8644e17f69f99448982d60c6c95/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/abb7e82de3f646ba515562e8cde6813a/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/abb7e82de3f646ba515562e8cde6813a/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/f2613bb19a8da0b5442f2e106382d0d2/versionedparcelable-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/f2613bb19a8da0b5442f2e106382d0d2/versionedparcelable-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/6046c59b547114c22e4bea600ea7d444/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/6046c59b547114c22e4bea600ea7d444/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/d742a577896e1e00dcae1a0bafdebef6/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/d742a577896e1e00dcae1a0bafdebef6/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/00c7b1dd0fd2ade32add6ce6da216953/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/00c7b1dd0fd2ade32add6ce6da216953/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/3ebaf077d3746dcbe9f6adcb54197476/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/3ebaf077d3746dcbe9f6adcb54197476/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/4f2f57217346246b9ee6b2d1c37c107c/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/4f2f57217346246b9ee6b2d1c37c107c/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/08ff29c6533e90c316f75147d5f1c971/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/08ff29c6533e90c316f75147d5f1c971/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/97de31dc344dff02cc02b09ca02415e0/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/hany/.gradle/caches/transforms-2/files-2.1/97de31dc344dff02cc02b09ca02415e0/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.ar.sceneform:sceneform-base:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/d1c8a5f85a2c113b136298cd9030b902/jetified-sceneform-base-1.14.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:sceneform-base:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/d1c8a5f85a2c113b136298cd9030b902/jetified-sceneform-base-1.14.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:filament-android:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/5dd71ba2cf865f1cf664b23b5d1afa57/jetified-filament-android-1.14.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.ar.sceneform:filament-android:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/5dd71ba2cf865f1cf664b23b5d1afa57/jetified-filament-android-1.14.0/AndroidManifest.xml:7:5-9:41
+INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/android/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.CAMERA
+ADDED from [:arcore_flutter_plugin] /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/library_manifest/release/AndroidManifest.xml:7:5-65
+	android:name
+		ADDED from [:arcore_flutter_plugin] /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/library_manifest/release/AndroidManifest.xml:7:22-62
+uses-feature#android.hardware.camera.ar
+ADDED from [:arcore_flutter_plugin] /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/library_manifest/release/AndroidManifest.xml:13:5-63
+	android:name
+		ADDED from [:arcore_flutter_plugin] /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/library_manifest/release/AndroidManifest.xml:13:19-60
+uses-feature#0x00030000
+ADDED from [:arcore_flutter_plugin] /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/library_manifest/release/AndroidManifest.xml:16:5-18:35
+	android:glEsVersion
+		ADDED from [:arcore_flutter_plugin] /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/library_manifest/release/AndroidManifest.xml:17:9-41
+	android:required
+		ADDED from [:arcore_flutter_plugin] /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/library_manifest/release/AndroidManifest.xml:18:9-32
+meta-data#com.google.ar.core
+ADDED from [:arcore_flutter_plugin] /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/library_manifest/release/AndroidManifest.xml:26:9-28:40
+	android:value
+		ADDED from [:arcore_flutter_plugin] /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/library_manifest/release/AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [:arcore_flutter_plugin] /home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/library_manifest/release/AndroidManifest.xml:27:13-46
+meta-data#com.google.ar.core.min_apk_version
+ADDED from [com.google.ar:core:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/bfd6857a846984a1c081d5569445875d/core-1.14.0/AndroidManifest.xml:33:9-35:41
+	android:value
+		ADDED from [com.google.ar:core:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/bfd6857a846984a1c081d5569445875d/core-1.14.0/AndroidManifest.xml:35:13-38
+	android:name
+		ADDED from [com.google.ar:core:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/bfd6857a846984a1c081d5569445875d/core-1.14.0/AndroidManifest.xml:34:13-62
+activity#com.google.ar.core.InstallActivity
+ADDED from [com.google.ar:core:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/bfd6857a846984a1c081d5569445875d/core-1.14.0/AndroidManifest.xml:37:9-43:80
+	android:excludeFromRecents
+		ADDED from [com.google.ar:core:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/bfd6857a846984a1c081d5569445875d/core-1.14.0/AndroidManifest.xml:40:13-46
+	android:launchMode
+		ADDED from [com.google.ar:core:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/bfd6857a846984a1c081d5569445875d/core-1.14.0/AndroidManifest.xml:42:13-43
+	android:exported
+		ADDED from [com.google.ar:core:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/bfd6857a846984a1c081d5569445875d/core-1.14.0/AndroidManifest.xml:41:13-37
+	android:configChanges
+		ADDED from [com.google.ar:core:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/bfd6857a846984a1c081d5569445875d/core-1.14.0/AndroidManifest.xml:39:13-74
+	android:theme
+		ADDED from [com.google.ar:core:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/bfd6857a846984a1c081d5569445875d/core-1.14.0/AndroidManifest.xml:43:13-77
+	android:name
+		ADDED from [com.google.ar:core:1.14.0] /home/hany/.gradle/caches/transforms-2/files-2.1/bfd6857a846984a1c081d5569445875d/core-1.14.0/AndroidManifest.xml:38:13-62

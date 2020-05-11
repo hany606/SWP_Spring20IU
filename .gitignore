@@ -1,1 +1,4 @@
+ar_app/local_sim_backend/DB/settings.json
+__pycache__/
+*.py[cod]
 src/credentials.txt
