@@ -35,7 +35,6 @@ class BodyLayout extends StatelessWidget {
 
 Widget _myListView(BuildContext context) {
 
-    // TODO: Get all the names and id of the tutorials
     // backing data
     final tutorials = ['Tutorial 1', 'Tutorial 2', 'Tutorial 3', 'Tutorial 4'];
 
@@ -44,9 +43,8 @@ Widget _myListView(BuildContext context) {
       itemBuilder: (context, index) {
         return ListTile(
             onTap: () {
-              // TODO: Pass the id of the tutorial to be run
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => TutorialRunning()));
+                  MaterialPageRoute(builder: (context) => TutorialRunning(index)));
                   // MaterialPageRoute(builder: (context) => TutorialRunning2()));
                   // MaterialPageRoute(builder: (context) => TestGRPC()));
             },

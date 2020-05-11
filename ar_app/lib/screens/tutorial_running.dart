@@ -2,34 +2,47 @@ import 'dart:math';
 import 'package:arcore_flutter_plugin/arcore_flutter_plugin.dart';
 import 'package:flutter/material.dart';
 import 'package:vector_math/vector_math_64.dart' as vector;
+import 'package:mongo_dart/mongo_dart.dart';
+import 'dart:typed_data';
+import 'dart:io';
+
+
 
 class TutorialRunning extends StatefulWidget {
+  int tutorial_idx = 0;
+  TutorialRunning(this.tutorial_idx);
   @override
-  _TutorialRunningState createState() => _TutorialRunningState();
+  _TutorialRunningState createState() => _TutorialRunningState(tutorial_idx);
 }
 
 class _TutorialRunningState extends State<TutorialRunning> {
-  // TODO: request the tutorial with specific id 
-  // TODO: get the number of the slides
-  // TODO: Start request slide by slide with next and prev
+
+  int tutorial_idx = 0;
+
+  _TutorialRunningState(int tidx){
+    tutorial_idx = tidx;
+  }
 
   ArCoreController arCoreController;
   ArCoreNode slideNode;
   int slideIdx = -1;
   
-  // TODO: Import this from the setting of the tutorial
+
+
   List<List<double>> positions_raw = [[0, 0, -2],[1, 0, -2], [2, 0, -2],[3, 0, -2], [4, 0, -2]];
   List<vector.Vector3> positions = new List();
 
   List<List<double>> rotations_raw = [[0, 1, 0, 1],[0, 1, 0, 1.25], [0, 1, 0, 1.5],[0, 1, 0, 1.75], [0, 1, 0, 2]];
   List<vector.Vector4> rotations = new List();
 
-  List<String> slides = ["https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial2/Slide0.gltf",
-                         "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide1.gltf",
-                         "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide2.gltf",
-                         "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide3.gltf",
-                         "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide4.gltf",
-                         "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide5.gltf"];
+  // List<String> slides = ["https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial2/Slide0.gltf",
+  //                        "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide1.gltf",
+  //                        "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide2.gltf",
+  //                        "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide3.gltf",
+  //                        "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide4.gltf",
+  //                        "https://github.com/hany606/SWP_Spring20IU/raw/sprint2-AR-app/gltf_exporter/tutorial1/Slide5.gltf"];
+
+  List<ByteData> slides = [];
 
   @override
   Widget build(BuildContext context) {
@@ -70,9 +83,22 @@ class _TutorialRunningState extends State<TutorialRunning> {
       rotations.add(vector.Vector4(rotations_raw[i][0],rotations_raw[i][1],rotations_raw[i][2], rotations_raw[i][3]));
     }
 
+    _getSlides(tutorial_idx);
+
     _addIntroGuide();
     // _addSlide(0);
   }
+
+  void _getSlides(int tutorial_idx) async{
+    Db db = Db("mongodb://127.0.0.1:27017/");
+    await db.open();
+    DbCollection coll = db.collection("arapp");
+    var result = await coll.find(where.eq("tutorial_id", tutorial_idx)).forEach((v)=>{
+      slides.add(v["img"])
+    });
+    await db.close();
+  }
+
   void _addIntroGuide() {
     final introSlide = ArCoreReferenceNode(
         name: "current",
@@ -86,9 +112,19 @@ class _TutorialRunningState extends State<TutorialRunning> {
   }
 
   void _addSlide(int idx) {
-    final slideNode = ArCoreReferenceNode(
+    final current_material = ArCoreMaterial(
+      textureBytes: slides[idx].buffer.asUint8List()
+    );
+
+    final current_cube_shape = ArCoreCube(
+      materials: [current_material],
+    );
+
+    // final slideNode = ArCoreReferenceNode(
+      final slideNode = ArCoreNode(
         name: "current",
-        objectUrl: slides[idx],
+        // objectUrl: slides[idx],
+        shape: current_cube_shape,
         position: positions[idx],
         rotation: rotations[idx]
         );
@@ -114,7 +150,6 @@ class _TutorialRunningState extends State<TutorialRunning> {
 }
 
 class SlideControl extends StatefulWidget {
-  // TODO: Configurations that will be set from the file of the tutorial describtion
   final int initialSlideIdx;
   final int minSlideIdx = 0;
   final int maxSlideIdx;
