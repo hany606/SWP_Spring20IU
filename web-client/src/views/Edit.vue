@@ -97,6 +97,7 @@ export default {
       axios.post(path).then((response) => {
         this.title = response.data.title;
         this.slides = response.data.slides;
+        this.current = this.slides.length - 1;
       });
     },
     onDeleteSlide() {
