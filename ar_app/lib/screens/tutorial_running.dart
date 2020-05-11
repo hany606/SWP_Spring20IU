@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:vector_math/vector_math_64.dart' as vector;
 import 'package:mongo_dart/mongo_dart.dart';
 import 'dart:typed_data';
-import 'dart:io';
 
 
 
@@ -92,8 +91,8 @@ class _TutorialRunningState extends State<TutorialRunning> {
   void _getSlides(int tutorial_idx) async{
     Db db = Db("mongodb://127.0.0.1:27017/");
     await db.open();
-    DbCollection coll = db.collection("arapp");
-    var result = await coll.find(where.eq("tutorial_id", tutorial_idx)).forEach((v)=>{
+    DbCollection coll = db.collection("presentations");
+    var result = await coll.find(where.eq("id", tutorial_idx)).forEach((v)=>{
       slides.add(v["img"])
     });
     await db.close();
