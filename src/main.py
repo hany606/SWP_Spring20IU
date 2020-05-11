@@ -83,6 +83,7 @@ def url_add_slide(id):
         buffered = BytesIO()
         img.save(buffered, format="PNG")
         img_str = base64.b64encode(buffered.getvalue())
+        img_string = str(img_str)[2:-1]
         pres['slides'].append(img_str)
         db.presentations.update_one({'id': id}, {'$set': {'slides': pres['slides']}})
         print("Presentation is updated and saved to the database")
