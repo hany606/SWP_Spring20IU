@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'tutorial_running.dart';
+// import 'tutorial_running2.dart';
 // import 'test_grpc.dart';
 
 
@@ -46,6 +47,7 @@ Widget _myListView(BuildContext context) {
               // TODO: Pass the id of the tutorial to be run
               Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => TutorialRunning()));
+                  // MaterialPageRoute(builder: (context) => TutorialRunning2()));
                   // MaterialPageRoute(builder: (context) => TestGRPC()));
             },
           title: Text(tutorials[index]),
