@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/res/merged/release/layout-v21/notification_action_tombstone.xml",
+        "source": "/home/hany/.gradle/caches/transforms-2/files-2.1/6df36a31058d5c5c5cc678a139da4355/core-1.0.0/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/res/merged/release/layout-v21/notification_action.xml",
+        "source": "/home/hany/.gradle/caches/transforms-2/files-2.1/6df36a31058d5c5c5cc678a139da4355/core-1.0.0/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/res/merged/release/layout-v21/notification_template_icon_group.xml",
+        "source": "/home/hany/.gradle/caches/transforms-2/files-2.1/6df36a31058d5c5c5cc678a139da4355/core-1.0.0/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/home/hany/repos/Uni_Courses/SWP_Spring20IU/ar_app/build/arcore_flutter_plugin/intermediates/res/merged/release/layout-v21/notification_template_custom_big.xml",
+        "source": "/home/hany/.gradle/caches/transforms-2/files-2.1/6df36a31058d5c5c5cc678a139da4355/core-1.0.0/res/layout-v21/notification_template_custom_big.xml"
+    }
+]
