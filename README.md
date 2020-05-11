@@ -37,3 +37,14 @@ For example:
 ```
 
 * Before any starting in coding any work, pull the newest version, and after adding impelementing something new, add and commit, and before closing your machine push your work.
+
+## Deployment instructions
+To run the application, frontend and backend servers must be lauched.
+* to launch a frontend server, in `./web-client/src/` run:
+```
+    npm run serve
+```
+* to launch a backend server, in `./src/` run:
+```
+    python3 main.py
+```
